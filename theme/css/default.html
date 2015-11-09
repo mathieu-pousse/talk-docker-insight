@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<!-- 2015-09-13 Sun 17:03 -->
+<meta  charset="utf-8" />
+<meta  htto-equiv="X-UA-Compatible" content="chrome=1" />
+<meta  name="generator" content="Org-mode with org-ioslide" />
+<meta  name="author" content="Vincent Demeester" />
+
+
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--This one seems to work all the time, but really small on ipad-->
+<!--<meta name="viewport" content="initial-scale=0.4">-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="stylesheet" media="all" href="theme/css/default.css" />
+<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css" />
+<link rel="stylesheet" media="all" href="theme/css/small-icon.css" />
+<base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+<script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+
+   <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+
+<script src="js/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML,local/local" type="text/javascript"></script>
+</head>
+<body style="opacity: 0">
+<slides class="layout-widescreen">
+<slide class="title-slide segue nobackground">
+       <aside class="gdbar"><img src="images/emacs-icon.png"></aside>
+       <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+       <hgroup class="auto-fadein">
+         <h1 data-config-title><!-- populated from slide_config.json --></h1>
+         <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+         <p data-config-presenter><!-- populated from slide_config.json --></p>
+       </hgroup>
+    </slide>
+  <p>
+@charset "UTF-8";
+/**
+</p>
+<ul>
+<li>Base SlideDeck Styles
+</li>
+</ul>
+<p>
+ <b>/
+/</b> line 51, ../scss/<sub>base</sub>.scss */
+html {
+  height: 100%;
+  overflow: hidden;
+}
+</p>
+
+<p>
+<i>* line 56, ../scss/<sub>base</sub>.scss *</i>
+body {
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  height: 100%;
+  min-height: 740px;
+  width: 100%;
+  overflow: hidden;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  -moz-transition: opacity 800ms ease-in 100ms;
+  -o-transition: opacity 800ms ease-in 100ms;
+  -webkit-transition: opacity 800ms ease-in;
+  -webkit-transition-delay: 100ms;
+  transition: opacity 800ms ease-in 100ms;
+}
+<i>* line 72, ../scss/<sub>base</sub>.scss *</i>
+body.loaded {
+  opacity: 1 !important;
+}
+</p>
+
+<p>
+<i>* line 77, ../scss/<sub>base</sub>.scss *</i>
+input, button {
+  vertical-align: middle;
+}
+</p>
+
+<p>
+<i>* line 81, ../scss/<sub>base</sub>.scss *</i>
+slides &gt; slide[hidden] {
+  display: none !important;
+}
+</p>
+
+<p>
+<i>* line 85, ../scss/<sub>base</sub>.scss *</i>
+slides {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -moz-perspective: 1000;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -moz-transition: opacity 800ms ease-in 100ms;
+  -o-transition: opacity 800ms ease-in 100ms;
+  -webkit-transition: opacity 800ms ease-in;
+  -webkit-transition-delay: 100ms;
+  transition: opacity 800ms ease-in 100ms;
+}
+</p>
+
+<p>
+<i>* line 97, ../scss/<sub>base</sub>.scss *</i>
+slides &gt; slide {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  left: 50%;
+  top: 50%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+</p>
+
+<p>
+<i>* Slide styles *</i>
+/*article.fill iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+</p>
+
+<p>
+border: 0;
+margin: 0;
+</p>
+
+<p>
+@include border-radius(10px);
+</p>
+
+<p>
+  z-index: -1;
+}
+</p>
+
+<p>
+slide.fill {
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+</p>
+
+<p>
+slide.fill img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+</p>
+
+<p>
+  z-index: -1;
+}
+<b>/
+/*</b>
+</p>
+<ul>
+<li>Theme Styles
+</li>
+</ul>
+<p>
+ <b>/
+/</b> line 22, ../scss/default.scss */
+::selection {
+  color: white;
+  background-color: #ffd14d;
+  text-shadow: none;
+}
+</p>
+
+<p>
+<i>* line 28, ../scss/default.scss *</i>
+::-webkit-scrollbar {
+  height: 16px;
+  overflow: visible;
+  width: 16px;
+}
+</p>
+
+<p>
+<i>* line 33, ../scss/default.scss *</i>
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  background-clip: padding-box;
+  border: solid transparent;
+  min-height: 28px;
+  padding: 100px 0 0;
+  -moz-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+  border-width: 1px 1px 1px 6px;
+}
+</p>
+
+<p>
+<i>* line 42, ../scss/default.scss *</i>
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+</p>
+
+<p>
+<i>* line 45, ../scss/default.scss *</i>
+::-webkit-scrollbar-button {
+  height: 0;
+  width: 0;
+}
+</p>
+
+<p>
+<i>* line 49, ../scss/default.scss *</i>
+::-webkit-scrollbar-track {
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 0 0 0 4px;
+}
+</p>
+
+<p>
+<i>* line 54, ../scss/default.scss *</i>
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+</p>
+
+<p>
+<i>* line 58, ../scss/default.scss *</i>
+body {
+  background: black;
+}
+</p>
+
+<p>
+<i>* line 62, ../scss/default.scss *</i>
+slides &gt; slide {
+  display: none;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 26px;
+  color: #797979;
+  width: 900px;
+  height: 700px;
+  margin-left: -450px;
+  margin-top: -350px;
+  padding: 40px 60px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+<i>* line 83, ../scss/default.scss *</i>
+slides &gt; slide.far-past {
+  display: none;
+}
+<i>* line 90, ../scss/default.scss *</i>
+slides &gt; slide.past {
+  display: block;
+  opacity: 0;
+}
+<i>* line 97, ../scss/default.scss *</i>
+slides &gt; slide.current {
+  display: block;
+  opacity: 1;
+}
+<i>* line 103, ../scss/default.scss *</i>
+slides &gt; slide.current .auto-fadein {
+  opacity: 1;
+}
+<i>* line 107, ../scss/default.scss *</i>
+slides &gt; slide.current .gdbar {
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+<i>* line 112, ../scss/default.scss *</i>
+slides &gt; slide.next {
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+}
+<i>* line 120, ../scss/default.scss *</i>
+slides &gt; slide.far-next {
+  display: none;
+}
+<i>* line 127, ../scss/default.scss *</i>
+slides &gt; slide.dark {
+  background: #515151 !important;
+}
+<i>* line 135, ../scss/default.scss *</i>
+slides &gt; slide:not(.nobackground):before {
+  font-size: 12pt;
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  left: 60px;
+  background: url(../../images/google<sub>developers</sub><sub>icon</sub><sub>128</sub>.png) no-repeat 0 50%;
+  -moz-background-size: 30px 30px;
+  -o-background-size: 30px 30px;
+  -webkit-background-size: 30px 30px;
+  background-size: 30px 30px;
+  padding-left: 40px;
+  height: 30px;
+  line-height: 1.9;
+}
+<i>* line 147, ../scss/default.scss *</i>
+slides &gt; slide:not(.nobackground):after {
+  font-size: 12pt;
+  content: attr(data-slide-num) "/" attr(data-total-slides);
+  position: absolute;
+  bottom: 20px;
+  right: 60px;
+  line-height: 1.9;
+}
+<i>* line 158, ../scss/default.scss *</i>
+slides &gt; slide.title-slide:after {
+  content: '';
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: 100%;
+  height: 60px;
+}
+<i>* line 170, ../scss/default.scss *</i>
+slides &gt; slide.backdrop {
+  z-index: -10;
+  display: block !important;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iODUlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZTZlNmU2Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(85%, #ffffff), color-stop(100%, #e6e6e6));
+  background: -moz-linear-gradient(#ffffff, #ffffff 85%, #e6e6e6);
+  background: -webkit-linear-gradient(#ffffff, #ffffff 85%, #e6e6e6);
+  background: linear-gradient(#ffffff, #ffffff 85%, #e6e6e6);
+  background-color: white;
+}
+<i>* line 175, ../scss/default.scss *</i>
+slides &gt; slide.backdrop:after, slides &gt; slide.backdrop:before {
+  display: none;
+}
+<i>* line 180, ../scss/default.scss *</i>
+slides &gt; slide &gt; hgroup + article {
+  margin-top: 45px;
+}
+<i>* line 184, ../scss/default.scss *</i>
+slides &gt; slide &gt; hgroup + article.flexbox.vcenter, slides &gt; slide &gt; hgroup + article.flexbox.vleft, slides &gt; slide &gt; hgroup + article.flexbox.vright {
+  height: 80%;
+}
+<i>* line 189, ../scss/default.scss *</i>
+slides &gt; slide &gt; hgroup + article p {
+  margin-bottom: 1em;
+}
+<i>* line 194, ../scss/default.scss *</i>
+slides &gt; slide &gt; article:only-child {
+  height: 100%;
+}
+<i>* line 197, ../scss/default.scss *</i>
+slides &gt; slide &gt; article:only-child &gt; iframe {
+  height: 98%;
+}
+</p>
+
+<p>
+<i>* line 203, ../scss/default.scss *</i>
+slides.layout-faux-widescreen &gt; slide {
+  padding: 40px 160px;
+}
+</p>
+
+<p>
+<i>* line 212, ../scss/default.scss *</i>
+slides.layout-widescreen &gt; slide,
+slides.layout-faux-widescreen &gt; slide {
+  margin-left: -550px;
+  width: 1100px;
+}
+<i>* line 217, ../scss/default.scss *</i>
+slides.layout-widescreen &gt; slide.far-past,
+slides.layout-faux-widescreen &gt; slide.far-past {
+  display: block;
+  display: none;
+  -moz-transform: translate(-2260px);
+  -ms-transform: translate(-2260px);
+  -webkit-transform: translate(-2260px);
+  transform: translate(-2260px);
+  -moz-transform: translate3d(-2260px, 0, 0);
+  -ms-transform: translate3d(-2260px, 0, 0);
+  -webkit-transform: translate3d(-2260px, 0, 0);
+  transform: translate3d(-2260px, 0, 0);
+}
+<i>* line 224, ../scss/default.scss *</i>
+slides.layout-widescreen &gt; slide.past,
+slides.layout-faux-widescreen &gt; slide.past {
+  display: block;
+  opacity: 0;
+}
+<i>* line 231, ../scss/default.scss *</i>
+slides.layout-widescreen &gt; slide.current,
+slides.layout-faux-widescreen &gt; slide.current {
+  display: block;
+  opacity: 1;
+}
+<i>* line 238, ../scss/default.scss *</i>
+slides.layout-widescreen &gt; slide.next,
+slides.layout-faux-widescreen &gt; slide.next {
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+}
+<i>* line 246, ../scss/default.scss *</i>
+slides.layout-widescreen &gt; slide.far-next,
+slides.layout-faux-widescreen &gt; slide.far-next {
+  display: block;
+  display: none;
+  -moz-transform: translate(2260px);
+  -ms-transform: translate(2260px);
+  -webkit-transform: translate(2260px);
+  transform: translate(2260px);
+  -moz-transform: translate3d(2260px, 0, 0);
+  -ms-transform: translate3d(2260px, 0, 0);
+  -webkit-transform: translate3d(2260px, 0, 0);
+  transform: translate3d(2260px, 0, 0);
+}
+<i>* line 253, ../scss/default.scss *</i>
+slides.layout-widescreen #prev-slide-area,
+slides.layout-faux-widescreen #prev-slide-area {
+  margin-left: -650px;
+}
+<i>* line 257, ../scss/default.scss *</i>
+slides.layout-widescreen #next-slide-area,
+slides.layout-faux-widescreen #next-slide-area {
+  margin-left: 550px;
+}
+</p>
+
+<p>
+<i>* line 262, ../scss/default.scss *</i>
+b {
+  font-weight: 600;
+}
+</p>
+
+<p>
+<i>* line 266, ../scss/default.scss *</i>
+a {
+  color: #2a7cdf;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(42, 124, 223, 0.5);
+}
+<i>* line 271, ../scss/default.scss *</i>
+a:hover {
+  color: black !important;
+}
+</p>
+
+<p>
+<i>* line 276, ../scss/default.scss *</i>
+h1, h2, h3 {
+  font-weight: 600;
+}
+</p>
+
+<p>
+<i>* line 280, ../scss/default.scss *</i>
+h2 {
+  font-size: 45px;
+  line-height: 45px;
+  letter-spacing: -2px;
+  color: #515151;
+}
+</p>
+
+<p>
+<i>* line 287, ../scss/default.scss *</i>
+h3 {
+  font-size: 30px;
+  letter-spacing: -1px;
+  line-height: 2;
+  font-weight: inherit;
+  color: #797979;
+}
+</p>
+
+<p>
+<i>* line 295, ../scss/default.scss *</i>
+ul {
+  margin-bottom: 1.2em;
+  margin-left: 1.2em;
+  position: relative;
+}
+<i>* line 301, ../scss/default.scss *</i>
+ul li ul {
+  margin-left: 2em;
+  margin-bottom: 1.2em;
+}
+</p>
+
+<p>
+<i>* line 308, ../scss/default.scss *</i>
+ol {
+  margin-bottom: 1.2em;
+  margin-left: 1.2em;
+  position: relative;
+}
+<i>* line 313, ../scss/default.scss *</i>
+ol li ol {
+  margin-left: 2em;
+  margin-bottom: 1.2em;
+}
+</p>
+
+<p>
+<i>* line 322, ../scss/default.scss *</i>
+.highlight-code slide.current pre &gt; * {
+  opacity: 0.25;
+  -moz-transition: opacity 0.5s ease-in;
+  -o-transition: opacity 0.5s ease-in;
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+}
+<i>* line 326, ../scss/default.scss *</i>
+.highlight-code slide.current b {
+  opacity: 1;
+}
+</p>
+
+<p>
+<i>* line 331, ../scss/default.scss *</i>
+pre {
+  font-family: 'Source Code Pro', 'Courier New', monospace;
+  font-size: 20px;
+  line-height: 28px;
+  padding: 10px 0 10px 60px;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+  width: 106%;
+  background-color: #e6e6e6;
+  left: -60px;
+  position: relative;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  <i><b>overflow: hidden;</b></i>
+}
+<i>* line 345, ../scss/default.scss *</i>
+pre[data-lang]:after {
+  content: attr(data-lang);
+  background-color: #a9a9a9;
+  right: 0;
+  top: 0;
+  position: absolute;
+  font-size: 16pt;
+  color: white;
+  padding: 2px 25px;
+  text-transform: uppercase;
+}
+</p>
+
+<p>
+<i>* line 358, ../scss/default.scss *</i>
+pre[data-lang="go"] {
+  color: #333;
+}
+</p>
+
+<p>
+<i>* line 362, ../scss/default.scss *</i>
+code {
+  font-size: 95%;
+  font-family: 'Source Code Pro', 'Courier New', monospace;
+  color: #515151;
+  background-color: #e6e6e6;
+  padding: 0 0.25em;
+  border-radius: 0.1em;
+}
+</p>
+
+<p>
+<i>* line 371, ../scss/default.scss *</i>
+iframe {
+  width: 100%;
+  height: 530px;
+  background: white;
+  border: 1px solid #e6e6e6;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+</p>
+
+<p>
+<i>* line 379, ../scss/default.scss *</i>
+dt {
+  font-weight: bold;
+}
+</p>
+
+<p>
+<i>* line 383, ../scss/default.scss *</i>
+button {
+  display: inline-block;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSI0MCUiIHN0b3AtY29sb3I9IiNmOWY5ZjkiLz48c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1jb2xvcj0iI2UzZTNlMyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(40%, #f9f9f9), color-stop(70%, #e3e3e3));
+  background: -moz-linear-gradient(#f9f9f9 40%, #e3e3e3 70%);
+  background: -webkit-linear-gradient(#f9f9f9 40%, #e3e3e3 70%);
+  background: linear-gradient(#f9f9f9 40%, #e3e3e3 70%);
+  border: 1px solid #a9a9a9;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-size: 10pt;
+}
+</p>
+
+<p>
+<i>* line 397, ../scss/default.scss *</i>
+button:not(:disabled):hover {
+  border-color: #515151;
+}
+</p>
+
+<p>
+<i>* line 401, ../scss/default.scss *</i>
+button:not(:disabled):active {
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSI0MCUiIHN0b3AtY29sb3I9IiNlM2UzZTMiLz48c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1jb2xvcj0iI2Y5ZjlmOSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(40%, #e3e3e3), color-stop(70%, #f9f9f9));
+  background: -moz-linear-gradient(#e3e3e3 40%, #f9f9f9 70%);
+  background: -webkit-linear-gradient(#e3e3e3 40%, #f9f9f9 70%);
+  background: linear-gradient(#e3e3e3 40%, #f9f9f9 70%);
+}
+</p>
+
+<p>
+<i>* line 405, ../scss/default.scss *</i>
+:disabled {
+  color: #a9a9a9;
+}
+</p>
+
+<p>
+<i>* line 409, ../scss/default.scss *</i>
+.blue {
+  color: #4387fd;
+}
+</p>
+
+<p>
+<i>* line 412, ../scss/default.scss *</i>
+.blue2 {
+  color: #3c8ef3;
+}
+</p>
+
+<p>
+<i>* line 415, ../scss/default.scss *</i>
+.blue3 {
+  color: #2a7cdf;
+}
+</p>
+
+<p>
+<i>* line 418, ../scss/default.scss *</i>
+.yellow {
+  color: #ffd14d;
+}
+</p>
+
+<p>
+<i>* line 421, ../scss/default.scss *</i>
+.yellow2 {
+  color: #f9cc46;
+}
+</p>
+
+<p>
+<i>* line 424, ../scss/default.scss *</i>
+.yellow3 {
+  color: #f6c000;
+}
+</p>
+
+<p>
+<i>* line 427, ../scss/default.scss *</i>
+.green {
+  color: #0da861;
+}
+</p>
+
+<p>
+<i>* line 430, ../scss/default.scss *</i>
+.green2 {
+  color: #00a86d;
+}
+</p>
+
+<p>
+<i>* line 433, ../scss/default.scss *</i>
+.green3 {
+  color: #009f5d;
+}
+</p>
+
+<p>
+<i>* line 436, ../scss/default.scss *</i>
+.red {
+  color: #f44a3f;
+}
+</p>
+
+<p>
+<i>* line 439, ../scss/default.scss *</i>
+.red2 {
+  color: #e0543e;
+}
+</p>
+
+<p>
+<i>* line 442, ../scss/default.scss *</i>
+.red3 {
+  color: #d94d3a;
+}
+</p>
+
+<p>
+<i>* line 445, ../scss/default.scss *</i>
+.gray {
+  color: #e6e6e6;
+}
+</p>
+
+<p>
+<i>* line 448, ../scss/default.scss *</i>
+.gray2 {
+  color: #a9a9a9;
+}
+</p>
+
+<p>
+<i>* line 451, ../scss/default.scss *</i>
+.gray3 {
+  color: #797979;
+}
+</p>
+
+<p>
+<i>* line 454, ../scss/default.scss *</i>
+.gray4 {
+  color: #515151;
+}
+</p>
+
+<p>
+<i>* line 458, ../scss/default.scss *</i>
+.white {
+  color: white !important;
+}
+</p>
+
+<p>
+<i>* line 461, ../scss/default.scss *</i>
+.black {
+  color: black !important;
+}
+</p>
+
+<p>
+<i>* line 465, ../scss/default.scss *</i>
+.columns-2 {
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
+}
+</p>
+
+<p>
+<i>* line 469, ../scss/default.scss *</i>
+table {
+  width: 100%;
+  border-collapse: -moz-initial;
+  border-collapse: initial;
+  border-spacing: 2px;
+  border-bottom: none;
+  border-top: none;
+}
+<i>* line 477, ../scss/default.scss *</i>
+table tr &gt; td:first-child, table th {
+  font-weight: 600;
+  color: #515151;
+}
+<i>* line 482, ../scss/default.scss *</i>
+table tr:nth-child(odd) {
+  background-color: #E3FFEA;
+}
+<i>* line 486, ../scss/default.scss *</i>
+table th {
+  color: white;
+  font-size: 0.8px;
+  background: #9DC8C8;
+}
+<i>* line 492, ../scss/default.scss *</i>
+table td, table th {
+  font-size: 0.8em;
+  padding: 0.5em 0.5em;
+}
+<i>* line 497, ../scss/default.scss *</i>
+table td.highlight {
+  color: #515151;
+  background-color: #ffff99;
+}
+<i>* line 502, ../scss/default.scss *</i>
+table.rows {
+  border-bottom: none;
+  border-right: 1px solid #797979;
+}
+</p>
+
+<p>
+<i>* line 508, ../scss/default.scss *</i>
+q {
+  font-size: 45px;
+  line-height: 72px;
+}
+<i>* line 512, ../scss/default.scss *</i>
+q:before {
+  content: '“';
+  position: absolute;
+  margin-left: -0.5em;
+}
+<i>* line 517, ../scss/default.scss *</i>
+q:after {
+  content: '”';
+  position: absolute;
+  margin-left: 0.1em;
+}
+</p>
+
+<p>
+<i>* line 524, ../scss/default.scss *</i>
+.footpara {
+  margin: 0;
+}
+</p>
+
+<p>
+<i>* line 528, ../scss/default.scss *</i>
+slide.fill {
+  background-repeat: no-repeat;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+</p>
+
+<p>
+<i>* Size variants *</i>
+<i>* line 537, ../scss/default.scss *</i>
+article.smaller p, article.smaller ul, article.smaller li {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+<i>* line 543, ../scss/default.scss *</i>
+article.smaller table td, article.smaller table th {
+  font-size: 14px;
+}
+<i>* line 547, ../scss/default.scss *</i>
+article.smaller pre {
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+<i>* line 552, ../scss/default.scss *</i>
+article.smaller q {
+  font-size: 40px;
+  line-height: 48px;
+}
+<i>* line 556, ../scss/default.scss *</i>
+article.smaller q:before, article.smaller q:after {
+  font-size: 60px;
+}
+</p>
+
+<p>
+<i>* line 563, ../scss/default.scss *</i>
+article.larger p, article.larger ul, article.larger li {
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0;
+}
+<i>* line 569, ../scss/default.scss *</i>
+article.larger table td, article.larger table th {
+  font-size: 20px;
+}
+<i>* line 573, ../scss/default.scss *</i>
+article.larger pre {
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 0;
+}
+<i>* line 578, ../scss/default.scss *</i>
+article.larger q {
+  font-size: 54px;
+  line-height: 60px;
+}
+<i>* line 582, ../scss/default.scss *</i>
+article.larger q:before, article.larger q:after {
+  font-size: 72px;
+}
+</p>
+
+<p>
+<i>* line 589, ../scss/default.scss *</i>
+article.large p, article.large ul, article.large li {
+  font-size: 42px;
+  line-height: 52px;
+  letter-spacing: 0;
+}
+<i>* line 595, ../scss/default.scss *</i>
+article.large table td, article.large table th {
+  font-size: 26px;
+}
+<i>* line 599, ../scss/default.scss *</i>
+article.large pre {
+  font-size: 42px;
+  line-height: 52px;
+  letter-spacing: 0;
+}
+<i>* line 604, ../scss/default.scss *</i>
+article.large q {
+  font-size: 42px;
+  line-height: 52px;
+}
+<i>* line 608, ../scss/default.scss *</i>
+article.large q:before, article.large q:after {
+  font-size: 52px;
+}
+</p>
+
+<p>
+<i>* Builds *</i>
+<i>* line 619, ../scss/default.scss *</i>
+.build &gt; * {
+  -moz-transition: opacity 0.5s ease-in-out 0.2s;
+  -o-transition: opacity 0.5s ease-in-out 0.2s;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -webkit-transition-delay: 0.2s;
+  transition: opacity 0.5s ease-in-out 0.2s;
+}
+<i>* line 623, ../scss/default.scss *</i>
+.build .to-build {
+  opacity: 0;
+}
+<i>* line 627, ../scss/default.scss *</i>
+.build .build-fade {
+  opacity: 0.3;
+}
+<i>* line 630, ../scss/default.scss *</i>
+.build .build-fade:hover {
+  opacity: 1.0;
+}
+</p>
+
+<p>
+<i>* line 637, ../scss/default.scss *</i>
+.popup .next .build .to-build {
+  opacity: 1;
+}
+<i>* line 641, ../scss/default.scss *</i>
+.popup .next .build .build-fade {
+  opacity: 1;
+}
+</p>
+
+<p>
+<i>* Pretty print *</i>
+<i>* line 648, ../scss/default.scss *</i>
+.prettyprint .str,
+.prettyprint .atv {
+  <i>* a markup attribute value *</i>
+  color: #009f5d;
+}
+</p>
+
+<p>
+<i>* line 652, ../scss/default.scss *</i>
+.prettyprint .kwd,
+.prettyprint .tag {
+  <i>* a markup tag name *</i>
+  color: #0066cc;
+}
+</p>
+
+<p>
+<i>* line 656, ../scss/default.scss *</i>
+.prettyprint .com {
+  <i>* a comment *</i>
+  color: #797979;
+  font-style: italic;
+}
+</p>
+
+<p>
+<i>* line 660, ../scss/default.scss *</i>
+.prettyprint .lit {
+  <i>* a literal value *</i>
+  color: #7f0000;
+}
+</p>
+
+<p>
+<i>* line 663, ../scss/default.scss *</i>
+.prettyprint .pun,
+.prettyprint .opn,
+.prettyprint .clo {
+  color: #515151;
+}
+</p>
+
+<p>
+<i>* line 668, ../scss/default.scss *</i>
+.prettyprint .typ,
+.prettyprint .atn,
+.prettyprint .dec,
+.prettyprint .var {
+  <i>* a declaration; a variable name *</i>
+  color: #d94d3a;
+}
+</p>
+
+<p>
+<i>* line 674, ../scss/default.scss *</i>
+.prettyprint .pln {
+  color: #515151;
+}
+</p>
+
+<p>
+<i>* line 678, ../scss/default.scss *</i>
+.note {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  display: -webkit-box !important;
+  display: -moz-box !important;
+  display: -ms-box !important;
+  display: -o-box !important;
+  display: box !important;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-box-align: center;
+  box-align: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-box-pack: center;
+  box-pack: center;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-transform: translateY(350px);
+  -ms-transform: translateY(350px);
+  -webkit-transform: translateY(350px);
+  transform: translateY(350px);
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+<i>* line 696, ../scss/default.scss *</i>
+.note &gt; section {
+  background: #fff;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 10px #797979;
+  -webkit-box-shadow: 0 0 10px #797979;
+  box-shadow: 0 0 10px #797979;
+  width: 60%;
+  padding: 2em;
+}
+</p>
+
+<p>
+<i>* line 713, ../scss/default.scss *</i>
+.with-notes.popup slides.layout-widescreen slide.next,
+.with-notes.popup slides.layout-faux-widescreen slide.next {
+  -moz-transform: translate3d(690px, 80px, 0) scale(0.35);
+  -ms-transform: translate3d(690px, 80px, 0) scale(0.35);
+  -webkit-transform: translate3d(690px, 80px, 0) scale(0.35);
+  transform: translate3d(690px, 80px, 0) scale(0.35);
+}
+<i>* line 716, ../scss/default.scss *</i>
+.with-notes.popup slides.layout-widescreen slide .note,
+.with-notes.popup slides.layout-faux-widescreen slide .note {
+  -moz-transform: translate3d(300px, 800px, 0) scale(1.5);
+  -ms-transform: translate3d(300px, 800px, 0) scale(1.5);
+  -webkit-transform: translate3d(300px, 800px, 0) scale(1.5);
+  transform: translate3d(300px, 800px, 0) scale(1.5);
+}
+<i>* line 722, ../scss/default.scss *</i>
+.with-notes.popup slide {
+  overflow: visible;
+  background: white;
+  -moz-transition: none;
+  -o-transition: none;
+  -webkit-transition: none;
+  transition: none;
+  pointer-events: none;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+<i>* line 729, ../scss/default.scss *</i>
+.with-notes.popup slide:not(.backdrop) {
+  -moz-transform: scale(0.6) translate3d(0.5em, 0.5em, 0);
+  -ms-transform: scale(0.6) translate3d(0.5em, 0.5em, 0);
+  -webkit-transform: scale(0.6) translate3d(0.5em, 0.5em, 0);
+  transform: scale(0.6) translate3d(0.5em, 0.5em, 0);
+  -moz-box-shadow: 0 0 10px #797979;
+  -webkit-box-shadow: 0 0 10px #797979;
+  box-shadow: 0 0 10px #797979;
+}
+<i>* line 734, ../scss/default.scss *</i>
+.with-notes.popup slide.backdrop {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNjAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2IxZGZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzQzODdmZCIvPjwvcmFkaWFsR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-radial-gradient(50% 50%, #b1dfff 0%, #4387fd 600px);
+  background-image: -webkit-radial-gradient(50% 50%, #b1dfff 0%, #4387fd 600px);
+  background-image: radial-gradient(50% 50%, #b1dfff 0%, #4387fd 600px);
+}
+<i>* line 740, ../scss/default.scss *</i>
+.with-notes.popup slide.next {
+  -moz-transform: translate3d(570px, 80px, 0) scale(0.35);
+  -ms-transform: translate3d(570px, 80px, 0) scale(0.35);
+  -webkit-transform: translate3d(570px, 80px, 0) scale(0.35);
+  transform: translate3d(570px, 80px, 0) scale(0.35);
+  opacity: 1 !important;
+}
+<i>* line 744, ../scss/default.scss *</i>
+.with-notes.popup slide.next .note {
+  display: none !important;
+}
+<i>* line 750, ../scss/default.scss *</i>
+.with-notes.popup .note {
+  width: 109%;
+  height: 260px;
+  background: #e6e6e6;
+  padding: 0;
+  -moz-box-shadow: 0 0 10px #797979;
+  -webkit-box-shadow: 0 0 10px #797979;
+  box-shadow: 0 0 10px #797979;
+  -moz-transform: translate3d(250px, 800px, 0) scale(1.5);
+  -ms-transform: translate3d(250px, 800px, 0) scale(1.5);
+  -webkit-transform: translate3d(250px, 800px, 0) scale(1.5);
+  transform: translate3d(250px, 800px, 0) scale(1.5);
+  -moz-transition: opacity 400ms ease-in-out;
+  -o-transition: opacity 400ms ease-in-out;
+  -webkit-transition: opacity 400ms ease-in-out;
+  transition: opacity 400ms ease-in-out;
+}
+<i>* line 761, ../scss/default.scss *</i>
+.with-notes.popup .note &gt; section {
+  background: #fff;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  overflow: auto;
+  padding: 1em;
+}
+<i>* line 774, ../scss/default.scss *</i>
+.with-notes .note {
+  opacity: 1;
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  pointer-events: auto;
+}
+</p>
+
+<p>
+<i>* line 781, ../scss/default.scss *</i>
+.source {
+  font-size: 14px;
+  color: #a9a9a9;
+  position: absolute;
+  bottom: 70px;
+  left: 60px;
+}
+</p>
+
+<p>
+<i>* line 789, ../scss/default.scss *</i>
+.centered {
+  text-align: center;
+}
+</p>
+
+<p>
+<i>* line 793, ../scss/default.scss *</i>
+.alignright {
+  float: right;
+}
+</p>
+
+<p>
+<i>* line 797, ../scss/default.scss *</i>
+blockquote, p.verse {
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif !important;
+  padding: 1em 1em;
+  background-color: #FCF7E8;
+  border-left: 0.2em solid #C6BB9F;
+  color: #616161;
+  quotes: "“" "”" "‘" "’";
+}
+<i>* line 805, ../scss/default.scss *</i>
+blockquote p, p.verse p {
+  margin-top: 0;
+  margin-bottom: 0 !important;
+}
+</p>
+
+<p>
+<i>* line 811, ../scss/default.scss *</i>
+.reflect {
+  -webkit-box-reflect: below 3px -webkit-linear-gradient(rgba(255, 255, 255, 0) 85%, white 150%);
+  -moz-box-reflect: below 3px -moz-linear-gradient(rgba(255, 255, 255, 0) 85%, white 150%);
+  -o-box-reflect: below 3px -o-linear-gradient(rgba(255, 255, 255, 0) 85%, white 150%);
+  -ms-box-reflect: below 3px -ms-linear-gradient(rgba(255, 255, 255, 0) 85%, white 150%);
+  box-reflect: below 3px linear-gradient(rgba(255, 255, 255, 0) 85%, #ffffff 150%);
+}
+</p>
+
+<p>
+<i>* line 819, ../scss/default.scss *</i>
+.flexbox {
+  display: -webkit-box !important;
+  display: -moz-box !important;
+  display: -ms-box !important;
+  display: -o-box !important;
+  display: box !important;
+}
+</p>
+
+<p>
+<i>* line 823, ../scss/default.scss *</i>
+.flexbox.vcenter {
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-box-align: center;
+  box-align: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-box-pack: center;
+  box-pack: center;
+  height: 100%;
+  width: 100%;
+}
+</p>
+
+<p>
+<i>* line 829, ../scss/default.scss *</i>
+.flexbox.vleft {
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-align: left;
+  -moz-box-align: left;
+  -ms-box-align: left;
+  box-align: left;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-box-pack: center;
+  box-pack: center;
+  height: 100%;
+  width: 100%;
+}
+</p>
+
+<p>
+<i>* line 835, ../scss/default.scss *</i>
+.flexbox.vright {
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-align: end;
+  -moz-box-align: end;
+  -ms-box-align: end;
+  box-align: end;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-box-pack: center;
+  box-pack: center;
+  height: 100%;
+  width: 100%;
+}
+</p>
+
+<p>
+<i>* line 841, ../scss/default.scss *</i>
+.auto-fadein {
+  -moz-transition: opacity 0.6s ease-in 1s;
+  -o-transition: opacity 0.6s ease-in 1s;
+  -webkit-transition: opacity 0.6s ease-in;
+  -webkit-transition-delay: 1s;
+  transition: opacity 0.6s ease-in 1s;
+  opacity: 0;
+}
+</p>
+
+<p>
+<i>* Clickable/tappable areas *</i>
+<i>* line 847, ../scss/default.scss *</i>
+.slide-area {
+  z-index: 1000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 700px;
+  left: 50%;
+  top: 50%;
+  cursor: pointer;
+  margin-top: -350px;
+}
+</p>
+
+<p>
+<i>* line 864, ../scss/default.scss *</i>
+#prev-slide-area {
+  margin-left: -550px;
+}
+</p>
+
+<p>
+<i>* line 869, ../scss/default.scss *</i>
+#next-slide-area {
+  margin-left: 450px;
+}
+</p>
+
+<p>
+<i>* <code>===</code> SLIDE CONTENT <code>===</code> *</i>
+<i>* line 877, ../scss/default.scss *</i>
+.logoslide img {
+  width: 383px;
+  height: 92px;
+}
+</p>
+
+<p>
+<i>* line 883, ../scss/default.scss *</i>
+.segue {
+  padding: 60px 120px;
+}
+<i>* line 886, ../scss/default.scss *</i>
+.segue h2 {
+  color: #e6e6e6;
+  font-size: 60px;
+}
+<i>* line 890, ../scss/default.scss *</i>
+.segue h3 {
+  color: #e6e6e6;
+  line-height: 2.8;
+}
+<i>* line 894, ../scss/default.scss *</i>
+.segue hgroup {
+  position: absolute;
+  bottom: 225px;
+}
+</p>
+
+<p>
+<i>* line 900, ../scss/default.scss *</i>
+.thank-you-slide {
+  background: #af1e3a !important;
+  color: white;
+}
+<i>* line 904, ../scss/default.scss *</i>
+.thank-you-slide h2 {
+  font-size: 60px;
+  color: inherit;
+}
+<i>* line 909, ../scss/default.scss *</i>
+.thank-you-slide article &gt; p {
+  margin-top: 2em;
+  font-size: 20pt;
+}
+<i>* line 914, ../scss/default.scss *</i>
+.thank-you-slide &gt; p {
+  position: absolute;
+  bottom: 80px;
+  font-size: 24pt;
+  line-height: 1.3;
+}
+.thank-you-slide &gt; aside.gdbar {
+    background: #464646 !important;
+}
+</p>
+
+<p>
+<i>* line 922, ../scss/default.scss *</i>
+aside.gdbar {
+  height: 97px;
+  width: 215px;
+  position: absolute;
+  left: -1px;
+  top: 125px;
+  -moz-border-radius: 0 10px 10px 0;
+  -webkit-border-radius: 0;
+  border-radius: 0 10px 10px 0;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U2ZTZlNiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U2ZTZlNiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==') no-repeat;
+  background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #e6e6e6), color-stop(100%, #e6e6e6)) no-repeat;
+  background: -moz-linear-gradient(left, #e6e6e6, #e6e6e6) no-repeat;
+  background: -webkit-linear-gradient(left, #e6e6e6, #e6e6e6) no-repeat;
+  background: linear-gradient(to right, #e6e6e6, #e6e6e6) no-repeat;
+  -moz-background-size: 0% 100%;
+  -o-background-size: 0% 100%;
+  -webkit-background-size: 0% 100%;
+  background-size: 0% 100%;
+  -moz-transition: all 0.5s ease-out 0.5s;
+  -o-transition: all 0.5s ease-out 0.5s;
+  -webkit-transition: all 0.5s ease-out;
+  -webkit-transition-delay: 0.5s;
+  transition: all 0.5s ease-out 0.5s;
+  <i>* Better to transition only on background-size, but not sure how to do that with the mixin. *</i>
+}
+<i>* line 933, ../scss/default.scss *</i>
+aside.gdbar.right {
+  right: 0;
+  left: -moz-initial;
+  left: initial;
+  top: 254px;
+  <i>* 96 is height of gray icon bar *</i>
+  -moz-transform: rotateZ(180deg);
+  -ms-transform: rotateZ(180deg);
+  -webkit-transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
+}
+<i>* line 940, ../scss/default.scss *</i>
+aside.gdbar.right img {
+  -moz-transform: rotateZ(180deg);
+  -ms-transform: rotateZ(180deg);
+  -webkit-transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
+}
+<i>* line 945, ../scss/default.scss *</i>
+aside.gdbar.bottom {
+  top: -moz-initial;
+  top: initial;
+  bottom: 60px;
+}
+<i>* line 951, ../scss/default.scss *</i>
+aside.gdbar img {
+  width: 85px;
+  height: 85px;
+  position: absolute;
+  right: 0;
+  margin: 8px 15px;
+}
+</p>
+
+<p>
+.title-slide {
+    background: pink !important;
+}
+<i>* line 962, ../scss/default.scss *</i>
+.title-slide hgroup {
+  bottom: 100px;
+}
+<i>* line 965, ../scss/default.scss *</i>
+.title-slide hgroup h1 {
+  font-size: 65px;
+  line-height: 1.4;
+  letter-spacing: -3px;
+  color: #515151;
+}
+<i>* line 972, ../scss/default.scss *</i>
+.title-slide hgroup h2 {
+  font-size: 34px;
+  color: #a9a9a9;
+  font-weight: inherit;
+}
+<i>* line 978, ../scss/default.scss *</i>
+.title-slide hgroup p {
+  font-size: 20px;
+  color: #797979;
+  line-height: 1.3;
+  margin-top: 2em;
+}
+</p>
+
+<p>
+<i>* line 987, ../scss/default.scss *</i>
+.quote {
+  color: #e6e6e6;
+}
+<i>* line 990, ../scss/default.scss *</i>
+.quote .author {
+  font-size: 24px;
+  position: absolute;
+  bottom: 80px;
+  line-height: 1.4;
+}
+</p>
+
+<p>
+<i>* line 999, ../scss/default.scss *</i>
+[data-config-contact] a {
+  color: white;
+  border-bottom: none;
+}
+<i>* line 1003, ../scss/default.scss *</i>
+[data-config-contact] span {
+  width: 115px;
+  display: inline-block;
+}
+</p>
+
+<p>
+<i>* line 1012, ../scss/default.scss *</i>
+.overview.popup .note {
+  display: none !important;
+}
+<i>* line 1018, ../scss/default.scss *</i>
+.overview slides slide {
+  display: block;
+  cursor: pointer;
+  opacity: 0.5;
+  pointer-events: auto !important;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iODUlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZTZlNmU2Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(85%, #ffffff), color-stop(100%, #e6e6e6));
+  background: -moz-linear-gradient(#ffffff, #ffffff 85%, #e6e6e6);
+  background: -webkit-linear-gradient(#ffffff, #ffffff 85%, #e6e6e6);
+  background: linear-gradient(#ffffff, #ffffff 85%, #e6e6e6);
+  background-color: white;
+}
+<i>* line 1019, ../scss/default.scss *</i>
+.overview slides slide.backdrop {
+  display: none !important;
+}
+<i>* line 1030, ../scss/default.scss *</i>
+.overview slides slide.far-past, .overview slides slide.past, .overview slides slide.next, .overview slides slide.far-next, .overview slides slide.far-past {
+  opacity: 0.5;
+  display: block;
+}
+<i>* line 1039, ../scss/default.scss *</i>
+.overview slides slide.current {
+  opacity: 1;
+}
+<i>* line 1045, ../scss/default.scss *</i>
+.overview .slide-area {
+  display: none;
+}
+</p>
+
+<p>
+@media print {
+  <i>* line 1052, ../scss/default.scss *</i>
+  slides slide {
+    display: block !important;
+    position: relative;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iODUlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZTZlNmU2Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(85%, #ffffff), color-stop(100%, #e6e6e6));
+    background: -moz-linear-gradient(#ffffff, #ffffff 85%, #e6e6e6);
+    background: -webkit-linear-gradient(#ffffff, #ffffff 85%, #e6e6e6);
+    background: linear-gradient(#ffffff, #ffffff 85%, #e6e6e6);
+    background-color: white;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    width: 100%;
+    height: 100%;
+    page-break-after: always;
+    top: auto !important;
+    left: auto !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    opacity: 1 !important;
+    color: #555;
+  }
+  <i>* line 1067, ../scss/default.scss *</i>
+  slides slide.far-past, slides slide.past, slides slide.next, slides slide.far-next, slides slide.far-past, slides slide.current {
+    opacity: 1 !important;
+    display: block !important;
+  }
+  <i>* line 1078, ../scss/default.scss *</i>
+  slides slide .build &gt; * {
+    -moz-transition: none;
+    -o-transition: none;
+    -webkit-transition: none;
+    transition: none;
+  }
+  <i>* line 1082, ../scss/default.scss *</i>
+  slides slide .build .to-build,
+  slides slide .build .build-fade {
+    opacity: 1;
+  }
+  <i>* line 1088, ../scss/default.scss *</i>
+  slides slide .auto-fadein {
+    opacity: 1 !important;
+  }
+  <i>* line 1092, ../scss/default.scss *</i>
+  slides slide.backdrop {
+    display: none !important;
+  }
+  <i>* line 1096, ../scss/default.scss *</i>
+  slides slide table.rows {
+    border-right: 0;
+  }
+  <i>* line 1101, ../scss/default.scss *</i>
+  slides slide[hidden] {
+    display: none !important;
+  }
+</p>
+
+<p>
+<i>* line 1106, ../scss/default.scss *</i>
+.slide-area {
+  display: none;
+}
+</p>
+
+<p>
+<i>* line 1110, ../scss/default.scss *</i>
+.reflect {
+  -webkit-box-reflect: none;
+  -moz-box-reflect: none;
+  -o-box-reflect: none;
+  -ms-box-reflect: none;
+  box-reflect: none;
+}
+</p>
+
+<p>
+  <i>* line 1118, ../scss/default.scss *</i>
+  pre, code {
+    font-family: monospace !important;
+  }
+}
+</p>
+<slide class="backdrop"></slide>
+</slides> 
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body> 
+
+</html>
