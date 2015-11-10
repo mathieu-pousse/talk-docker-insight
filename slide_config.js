@@ -1,7 +1,7 @@
 var SLIDE_CONFIG = {
    // Slide Settings
    settings: {
-     title: 'Docker', 
+     title: 'Docker insight', 
      subtitle: 'What\'s next !', 
      useBuilds: true, // Default: true. False will turn off slide animation builds. 
      usePrettify: true, // Default: true 
@@ -16,10 +16,10 @@ var SLIDE_CONFIG = {
  
    // Author information
    presenters: [{
-     name: 'vdemeester & mariolet', 
+     name: '@m', 
      company: 'Zenika', 
      gplus: '', 
-     twitter: 'vdemeest', 
+     twitter: 'ZenikaRennes', 
      www: 'http://zenika.com/', 
      github: '', 
    }]

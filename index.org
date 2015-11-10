@@ -105,14 +105,57 @@
 
 Le transport de conteneurs
 
+** Avant 1960
+
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 100%
+[[file:images/cargo-transport-pre-1960.png]]
+#+END_CENTER
+
+** Avant 1960
+
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 800
+[[file:images/also-a-matrix-from-hell.png]]
+#+END_CENTER
+
+** Avant 1960
+
+#+ATTR_HTML: :width 100%
+[[file:images/intermodal-shipping-container.png]]
+
+** Avant Docker
+
+#+ATTR_HTML: :width 100%
+[[file:images/the-challenge.png]]
+
+** Avant Docker
+
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 700
+[[file:images/the-matrix-from-hell.png]]
+#+END_CENTER
+
+** Avant Docker
+
+#+ATTR_HTML: :width 100%
+[[file:images/shipping-container-for-code.png]]
+
+** Avec Docker
+
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 700
+[[file:images/eliminates-matrix-from-hell.png]]
+#+END_CENTER
+
 ** Architecture
+
+#+ATTR_HTML: :width 500px :style float: right;
+[[file:images/docker-isolation-small.png]]
 
 #+BEGIN_QUOTE
 Standing on the shoulders of giants
 #+END_QUOTE
-
-#+ATTR_HTML: :width 400px
-[[file:images/docker-isolation-small.png]]
 
 ** Containers vs VMs
 
