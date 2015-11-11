@@ -1,13 +1,13 @@
 var SLIDE_CONFIG = {
    // Slide Settings
    settings: {
-     title: 'Docker insight', 
-     subtitle: 'What\'s next !', 
+     title: '', 
+     subtitle: '', 
      useBuilds: true, // Default: true. False will turn off slide animation builds. 
      usePrettify: true, // Default: true 
      enableSlideAreas: true, // Default: true. False turns off the click areas on either slide of the slides.
      enableTouch: true, // Default: true. If touch support should enabled. Note: the device must support touch.
-     favIcon: 'images/docker_icon_trans.png', 
+     favIcon: 'images/emacs-icon.png', 
      fonts: [
        'Open Sans:regular,semibold,italic,italicsemibold',
        'Source Code Pro'
@@ -16,11 +16,11 @@ var SLIDE_CONFIG = {
  
    // Author information
    presenters: [{
-     name: '@m', 
-     company: 'Zenika', 
+     name: 'root', 
+     company: '', 
      gplus: '', 
-     twitter: 'ZenikaRennes', 
-     www: 'http://zenika.com/', 
+     twitter: '', 
+     www: '', 
      github: '', 
    }]
 };
