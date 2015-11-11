@@ -9,4 +9,4 @@ RUN emacs --batch --script /root/.emacs.d/init.el --kill
 RUN mkdir -p /usr/src/slides
 WORKDIR /usr/src/slides
 
-ENTRYPOINT ["emacs", "--batch", "--eval", "(progn (package-initialize) (require 'ox-ioslide) )", "-f", "org-ioslide-export-to-html", "-file", "index.org"]
+ENTRYPOINT ["emacs", "index.org", "--kill", "--eval", "(progn (package-initialize) (require 'ox-ioslide) )", "-f", "org-ioslide-export-to-html"]
