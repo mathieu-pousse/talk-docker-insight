@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html ng-app="searchApp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Search it !</title>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>
+<script>
+	var searchApp = angular.module("searchApp", []);
+	searchApp.controller("SearchCtrl", function($scope,$http) {
+		$scope.search = function() {
+      if($scope.query) {
+        $scope.number = 0;
+        $http.get("/api/search/" + $scope.query).then(function (response) {
+          $scope.number = response.data;
+        });
+      }
+    }
+	});
+</script>
+</head>
+<body ng-controller="SearchCtrl">
+	<div class="container">
+		<div class="page-header" style="margin: 0">
+			<h1>Search it !</h1>
+		</div>
+		<div style="padding-top: 30px">
+				<div class="form-group">
+					<label class="col-md-1 control-label">Search</label>
+					<div class="col-md-3">
+						<input type="text" class="form-control" name="query" ng-model="query" ng-change="number=0">
+					</div>
+          <input type="button" class="clo-md-1" name="go" value="Go !" ng-click="search()">
+				</div>
+  			<div style="padding: 0px 0px 20px 30px">
+  				<h4 ng-show=number>{{query}} searched {{number}} times !</h4>
+          <h4 ng-hide="number || !query">Click "Go !" to search '{{query}}'</h4>
+        </div>
+		</div>
+	</div>
+</body>
+</html>
