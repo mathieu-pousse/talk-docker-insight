@@ -362,7 +362,7 @@ $ docker run -ti --rm -v myconvoy:/vol1 ubuntu ls /vol1
 
 #+ATTR_HTML: :class note
 #+BEGIN_QUOTE
-demo : choose a volume plugin and demo it (convoy, kv one @calavera) 
+demo : choose a volume plugin and demo it (convoy, kv one @calavera)
 - https://github.com/cpuguy83/docker-kvfs-driver
 - https://github.com/rancher/convoy
 demo : simple volume plugin ?
@@ -536,6 +536,23 @@ Public image registry
 [[file:images/frazelle_notepad.png]]
 #+END_CENTER
 
+* Docker 1.9
+  :PROPERTIES:
+  :SLIDE:   segue dark quote
+  :ASIDE:   right bottom
+  :ARTICLE: flexbox vleft auto-fadein
+  :END:
+
+** What's new
+
+- Multihost Network =docker network create front=
+
+- Volumes + Plugins =docker volume create ...=
+
+- Swarm 1.0
+
+- Build Args in Dockerfile
+
 
 * Thank You 🐸
 
@@ -551,4 +568,4 @@ Public image registry
 [fn:1] Footnote is in here!
 
 demo-plugin 2015 (weave/flocker)
-azure 
+azure
