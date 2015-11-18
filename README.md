@@ -48,12 +48,7 @@ Checkout http://zenikaouest.github.io/talk-docker-insight/
 
 ##~~Docker Machine~~
 ##~~Demo de Docker machine~~
-- est ce utile ?
-
 ##~~Docker Hub~~
-- le hub public
-- le hub privé
-- et ld DTR
 
 ##Nouveautés docker 1.9
 - Multihost Network
