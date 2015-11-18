@@ -1,0 +1,22 @@
+{
+  "name": "Docker-Insight",
+  "description": "Docker Insight",
+  "version": "0.1.0",
+  "author": "Zenika",
+  "homepage": "http://zenikaouest.github.io/talk-docker-insight",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZenikaOuest/talk-docker-insight"
+  },
+  "private": true,
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "gulp": "^3.9.0",
+    "zenika-formation-framework": "git+https://github.com/Zenika/Formation--Framework.git#theme_integ"
+  },
+  "config": {
+    "deploy": {
+      "name": "zenika-docker-insight"
+    }
+  }
+}
