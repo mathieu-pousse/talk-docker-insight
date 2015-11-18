@@ -46,15 +46,18 @@ Checkout http://zenikaouest.github.io/talk-docker-insight/
 - on se prépare qq VM’s qu’on a fait rejoindre le cluster au préalable
 - en live, on crée un manager, on fait pointer le client sur le manager swarm, et on lance quelques containers
 
-## Docker Machine
-##Demo de Docker machine ?
+##~~Docker Machine~~
+##~~Demo de Docker machine~~
 - est ce utile ?
 
-## Docker Hub
+##~~Docker Hub~~
 - le hub public
 - le hub privé
 - et ld DTR
 
-##Nouveautés docker 1.9 applicables a ce qu’on a dit (s’il y en a)
-- TBD
+##Nouveautés docker 1.9
+- Multihost Network
+- Volumes + Plugins
+- Swarm 1.0
+- Builds Args in Dockerfile
 
