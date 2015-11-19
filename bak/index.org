@@ -148,7 +148,7 @@ Le transport de conteneurs
 [[file:images/eliminates-matrix-from-hell.png]]
 #+END_CENTER
 
-** Architecture
+** Architecture 1/2
 
 #+ATTR_HTML: :width 500px :style float: right;
 [[file:images/docker-isolation-small.png]]
@@ -157,6 +157,12 @@ Le transport de conteneurs
 Standing on the shoulders of giants
 #+END_QUOTE
 
+** Architecture 2/2
+
+ - Développé en Go
+ - client / server
+ - API REST commune aux différentes briques
+
 ** Containers vs VMs
 
 #+ATTR_HTML: :width 550px :style float: right;
@@ -164,19 +170,45 @@ Standing on the shoulders of giants
 
 Quick note : /Repeat after me/ *Containers ARE NOT VMs !*
 
-** Principales notions
+** Concepts
+
+ - Image: Ensemble des (méta) données nécessaire au fonctionnement (template / read-only)
+ - Registry: Dépôt d'image (public / private / local)
+ - Container: Instance d'une image
+ - Volumes: Accès au FS de l'hôte
+ - Links: Partage de la stack réseau entre containers
+
+** Quick start
+
+ - Démarrer un nouveau container
+   - docker run
+   - docker commit
+   - docker start
+   - docker stop
+
+
+** Anatomie d'une image
+
+Multi layer filesystem
+ - X read-only / 1 read-write (copy-on-write) 
 
 #+ATTR_HTML: :width 400px :style float: right;
 [[file:images/docker-filesystems-multilayer-small.png]]
 
-- Registry (/Distribution/)
-  - Dépot d'images
-- Images (/Construction/)
-  - Template
-  - Lecture seule
-- Conteneurs (/Runtime/) :
-  - Basé sur une image
-  - Dispose d'un état
+** Docker run
+
+ - Démarre un container à partir d'une image
+   - Prépare le FS (fusion + 1 read-write)
+   - Execute le entry point et attend la fin du PID 1
+
+** Docker commit
+
+ - Enregistre le dernier layer
+ - Devient read-only pour le prochain container qui l'utilisera
+
+** Docker start / stop
+
+ 
 
 ** Show the code 😸
 
