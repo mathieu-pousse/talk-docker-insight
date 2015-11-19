@@ -11,4 +11,5 @@ package:
 	sudo chown -R $(shell id -un) dist
 
 run:
-	docker run -it --rm -v $(PWD)/Slides:/data/Slides -p 8000:8000 zenika/docker-insight
+	docker rm -f talk-docker-insight 2>/dev/null || true
+	docker run -it --name talk-docker-insight -v $(PWD)/Slides:/data/Slides -p 8000:8000 zenika/docker-insight
