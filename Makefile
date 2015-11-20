@@ -13,3 +13,6 @@ package:
 run:
 	docker rm -f talk-docker-insight 2>/dev/null || true
 	docker run -it --name talk-docker-insight -v $(PWD)/Slides:/data/Slides -p 8000:8000 zenika/docker-insight
+
+test:
+	@echo "Tester c'est douter"
