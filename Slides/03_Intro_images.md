@@ -36,12 +36,23 @@
 
 ## Concepts
 
- - **Image**: Ensemble des données / méta données nécessaires au fonctionnement (~ template / read-only)
- - **Registry**: Dépôt d'image (public / private)
- - **Container**: Instance d'une image
- - **Volumes**: Accès au FS de l'hôte
- - **Links / Networks**: Partage de la stack réseau entre containers
+- **Image**: Ensemble des données / méta données nécessaires au fonctionnement (~ template / read-only)
+- **Registry**: Dépôt d'image (public / private)
+- **Container**: Instance d'une image
+- **Volumes**: Accès au FS de l'hôte
+- **Links / Networks**: Partage de la stack réseau entre containers
 
+
+
+## Images
+
+- Peut être importé (ubuntu, centos, ...)
+- Se construit par couche successive avec `docker commit`
+- Via un Dockerfile
+
+![](ressources/images-layer.png)
+
+https://docs.docker.com/v1.8/article-img/architecture.svg
 
 
 ## Quick start
