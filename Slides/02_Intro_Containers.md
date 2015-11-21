@@ -36,12 +36,6 @@
 
 ## Avant Docker
 
-![](ressources/the-challenge.png)
-
-
-
-## Avant Docker
-
 ![](ressources/the-matrix-from-hell.png)
 
 

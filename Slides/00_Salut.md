@@ -1,6 +1,6 @@
 # Docker Insight
 
-<figure style="position: absolute; bottom: 150px; right: 300px;">
+<figure style="position: absolute; bottom: 150px; right: 300px; with: 100%">
     <img src="ressources/dockercon-bzh.png" alt="Logo Docker"/>
 </figure>
 
@@ -18,8 +18,8 @@
 ## @m_pousse
 
 - Mathieu POUSSE
-- Formateur Docker @zenika
-- Consultant chez YvesRocher
+- Formateur Docker
+- Consultant chez Yves Rocher
 - Dev ⇨ Ops
 - Java ⇨ Docker
 - OSS contributer

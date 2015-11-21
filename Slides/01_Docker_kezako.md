@@ -1,7 +1,7 @@
 # Présentation
 
-<figure style="position: absolute; bottom: 300px; right: 300px;">
-    <img src="ressources/dockercon-bzh.png" alt="docker-con"/>
+<figure>
+    <img style="padding-top: 50px" src="ressources/intro.jpeg" alt="docker-con"/>
 </figure>
 
 
@@ -34,12 +34,12 @@
 
 > "Docker is an open platform for developers and sysadmins to build, ship, and run distributed applications."
 
-<!-- .element: class="align-right" -->
+<!-- .element: class="align-right spacer" -->
 **docker.com**
 
 > "Docker is an open-source project that automates the deployment of applications inside software containers"
 
-<!-- .element: class="align-right" -->
+<!-- .element: class="align-right spacer" -->
 **wikipedia.org**
 
 

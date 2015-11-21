@@ -34,6 +34,12 @@
 
 
 
+# Demo time
+
+![](ressources/fingers-crossed.png)
+
+
+
 ## Concepts
 
 - **Image**: Ensemble des données / méta données nécessaires au fonctionnement (~ template / read-only)
@@ -46,31 +52,128 @@
 
 ## Images
 
-- Peut être importé (ubuntu, centos, ...)
-- Se construit par couche successive avec `docker commit`
-- Via un Dockerfile
+- Downloaded from remote
+- Imported from tarball (ubuntu, centos, ...)
+- Built with `docker commit`
+- Built with  *Dockerfile*
 
 ![](ressources/images-layer.png)
 
-https://docs.docker.com/v1.8/article-img/architecture.svg
+
+
+## Dockerfile
+
+```Dockerfile
+FROM komljen/jdk-oracle
+MAINTAINER Alen Komljen <alen.komljen@live.com>
+
+RUN \
+  wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key \
+       | apt-key add - 
+RUN echo "deb http://pkg.jenkins-ci.org/debian binary/" \
+       > /etc/apt/sources.list.d/jenkins.list
+RUN apt-get update
+RUN apt-get -y install jenkins && rm -rf /var/lib/apt/lists/*
+
+VOLUME ["/root/.jenkins"]
+
+RUN rm /usr/sbin/policy-rc.d
+CMD ["/usr/bin/java", "-jar", "/usr/share/jenkins/jenkins.war", "--webroot=/root/.jenkins/web"]
+
+EXPOSE 8080
+```
+
+
+
+# Demo time
+
+![](ressources/fingers-crossed.png)
+
+
+
+## Run my first container
+
+Select an image an push it in a container !
+
+```
+$ docker run docker/whalesay cowsay big up @orange !
+ __________________ 
+< big up @orange ! >
+ ------------------ 
+    \
+     \
+      \     
+                    ##        .            
+              ## ## ##       ==            
+           ## ## ## ##      ===            
+       /""""""""""""""""___/ ===        
+  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~   
+       \______ o          __/            
+        \    \        __/             
+          \____\______/   
+
+```
+
+
+
+## Run deeper
+
+
+Options: 
+
+ - ``-it``: interactive container
+ - ``-d``: detach container from client and continue as a daemon
+ - ``--name``: name of the container 
+ - ``--rm``: remove container when terminated
+ - ``-p``: publish port <host>:<container>
+ - ``-v``: deal with volumes
+ - ``--link``: deal with links
+
 
 
 ## Quick start
 
 - Récupérer une image: 
 
-```docker pull ubuntu:15.04```
+```
+docker pull ubuntu:15.04
+```
 
 - Lancer une instance: 
 
-```docker run --rm -it ubuntu:15.04 bash```
+```
+docker run --rm -it ubuntu:15.04 bash
+```
 
 - Lister les instances: 
 
-```docker ps```
+```
+docker ps
+```
 
 - Supprimer une instance: 
 
-```docker rm 3876...```
+```
+docker rm <container-name-or-id>
+```
+
+- Démarrer / Arrêter une instance: 
+
+```
+docker stop  <container-name-or-id>
+docker start <container-name-or-id>
+```
+
+
+
+# Demo time
+
+![](ressources/fingers-crossed.png)
+
+
+
+# Résumé 
+
+![](https://docs.docker.com/v1.8/article-img/architecture.svg)
 
 
