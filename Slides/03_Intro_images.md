@@ -50,6 +50,20 @@
 
 
 
+## Basics
+
+L'image contient le necessaire pour faire fonctionner le container
+
+La commande executée au lancement du container définit le cycle de vit du container
+
+```
+$ id
+uid=0(root) gid=0(root) groups=0(root)
+```
+Complétement isolé
+
+
+
 ## Images
 
 - Downloaded from remote
@@ -126,7 +140,7 @@ Options:
  - ``--name``: name of the container 
  - ``--rm``: remove container when terminated
  - ``-p``: publish port <host>:<container>
- - ``-v``: deal with volumes
+ - ``--volume``: deal with volumes
  - ``--link``: deal with links
 
 
