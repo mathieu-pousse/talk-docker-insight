@@ -34,12 +34,6 @@
 
 
 
-# Demo time
-
-![](ressources/fingers-crossed.png)
-
-
-
 ## Concepts
 
 - **Image**: Ensemble des données / méta données nécessaires au fonctionnement (~ template / read-only)
@@ -96,12 +90,6 @@ CMD ["/usr/bin/java", "-jar", "/usr/share/jenkins/jenkins.war", "--webroot=/root
 
 EXPOSE 8080
 ```
-
-
-
-# Demo time
-
-![](ressources/fingers-crossed.png)
 
 
 
@@ -180,14 +168,14 @@ docker start <container-name-or-id>
 
 
 
-# Demo time
-
-![](ressources/fingers-crossed.png)
-
-
-
 # Résumé 
 
 ![](https://docs.docker.com/v1.8/article-img/architecture.svg)
+
+
+
+# Demo time
+
+![](ressources/fingers-crossed.png)
 
 
