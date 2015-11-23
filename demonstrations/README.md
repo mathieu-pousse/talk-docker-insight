@@ -7,6 +7,11 @@ export SWARM_ID=$(docker run --rm swarm create)
 ./container_ec2setup.sh start 2
 ## attendre suffisament
 ssh docker@<ip VM>
+cd talk-docker-insight/demonstrations/04-Compose
+docker-compose up
+### quand OK Ctrl+c
+docker-compose stop
+docker-compose rm
 ```
 
 ## DEMO 1 : Runs and builds
@@ -52,6 +57,7 @@ Stack Angular servie par Node + Java Spring + cache Redis
 
 ```bash
 cd 04-Compose
+vi docker-compose.yml
 # avant plan avec logs (Ctrl+C to quit)
 docker-compose up
 # arriere plan
