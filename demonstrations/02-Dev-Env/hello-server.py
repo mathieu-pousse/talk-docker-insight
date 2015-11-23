@@ -7,5 +7,5 @@ def hello_world(name):
     return 'Hello %s!' % name
 
 if __name__ == '__main__':
-    debug = os.environ.get('DEBUG', False)
+    debug = os.environ.get('DEV_MODE', False)
     app.run(host='0.0.0.0', debug=debug)
