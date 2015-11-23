@@ -17,6 +17,7 @@ docker-compose rm
 ## DEMO 1 : Runs and builds
 
 ```bash
+docker pull busybox
 docker run busybox echo "Hello Orange !"
 docker run docker/whalesay cowsay "Hello Orange !"
 cd 01-First-build
@@ -31,6 +32,13 @@ docker ps
 # on l'affiche
 curl http://localhost:8080
 # et aussi http://<ip VM>:8080
+# on stop
+docker stop <id>
+# il est caché...
+docker ps
+# ...meuh non 
+docker ps -a
+docker start <id>
 ```
 
 ## DEMO 2 : Dev Stack and Volumes
