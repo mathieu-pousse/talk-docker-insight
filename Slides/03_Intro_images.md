@@ -6,10 +6,10 @@
 
 
 
-## Architecture 1/2
+## Architecture
 
 - Développé en Go
-- OSS / github.com/docker
+- OSS / https://github.com/docker
 - Architecture client / server
 - API REST commune aux différentes briques
 
@@ -19,13 +19,15 @@
 
 
 
-## Architecture 2/2
+## Standing on the shoulders of giant
 
-![Standing on the shoulders of giant](ressources/docker-isolation-small.png)
+![](ressources/docker-isolation-small.png)
 
 
 
-## Containers vs VMs
+## VMs vs Containers
+
+<br/>
 
 ![](ressources/vm-vs-docker.png)
 
@@ -46,14 +48,19 @@
 
 ## Basics
 
+
+<br/>
 L'image contient le necessaire pour faire fonctionner le container
 
-La commande executée au lancement du container définit le cycle de vit du container
+<br/>
+La commande executée au lancement du container définit le cycle de vie du container
 
+<br/>
 ```
 $ id
 uid=0(root) gid=0(root) groups=0(root)
 ```
+<br/>
 Complétement isolé
 
 
@@ -71,7 +78,7 @@ Complétement isolé
 
 ## Dockerfile
 
-```Dockerfile
+```
 FROM komljen/jdk-oracle
 MAINTAINER Alen Komljen <alen.komljen@live.com>
 
@@ -97,8 +104,9 @@ EXPOSE 8080
 
 Select an image an push it in a container !
 
+<br/>
 ```
-$ docker run docker/whalesay cowsay big up @orange !
+$ docker run docker/whalesay cowsay "big up @orange !"
  __________________ 
 < big up @orange ! >
  ------------------ 
@@ -165,6 +173,24 @@ docker rm <container-name-or-id>
 docker stop  <container-name-or-id>
 docker start <container-name-or-id>
 ```
+
+
+
+# Hub
+
+![](ressources/hub.docker-home.png)
+
+
+
+## Search
+
+![](ressources/hub.docker-search.png)
+
+
+
+## Search
+
+![](ressources/hub.docker-details.png)
 
 
 
