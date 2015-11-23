@@ -1,9 +1,20 @@
+## INIT
+Sur machine locale
+```bash
+cd 00-Init
+docker pull swarm
+export SWARM_ID=$(docker run --rm swarm create)
+./container_ec2setup.sh start 2
+## attendre suffisament
+ssh docker@<ip VM>
+```
+
 ## DEMO 1 : Runs and builds
 
 ```bash
 docker run busybox echo "Hello Orange !"
 docker run docker/whalesay cowsay "Hello Orange !"
-cd 01b-First-build
+cd 01-First-build
 docker build -t wgetip .
 docker run wgetip
 docker run wgetip ipinfo.io/hostname
@@ -14,6 +25,7 @@ docker run -d -p 8080:8080 tomcat:7
 docker ps
 # on l'affiche
 curl http://localhost:8080
+# et aussi http://<ip VM>:8080
 ```
 
 ## DEMO 2 : Dev Stack and Volumes
@@ -29,17 +41,17 @@ curl localhost/hello/Orange
 cd ..
 ```
 
-## DEMO 2bis : Links
+## DEMO 3 : Links
 ```bash
 docker run --name cache redis
 ```
 
-## DEMO 3 : Compose
+## DEMO 4 : Compose
 
 Stack Angular servie par Node + Java Spring + cache Redis
 
 ```bash
-cd 03-Compose
+cd 04-Compose
 # avant plan avec logs (Ctrl+C to quit)
 docker-compose up
 # arriere plan
@@ -48,22 +60,10 @@ docker-compose up
 cd ..
 ```
 
-## DEMO 4 : Swarm
-
-### Init
-*A faire avant de commencer la présentation<br>*
-Création d'un cluster Swarm dont on récupère l'id, et création de 5 VM qui vont s'autoenregister sur le cluster
+## DEMO 5 : Swarm
 
 ```bash
-cd 04-Swarm
-docker pull swarm
-export SWARM_ID=$(docker run --rm swarm create)
-./container_ec2setup.sh start 5
-```
-
-### Demo
-
-```bash
+cd 05-Swarm
 # Si on doit rejoindre le cluster
 docker run -d swarm join --addr=$(curl -sf http://ipinfo.io/ip):2375 token://$SWARM_ID
 #

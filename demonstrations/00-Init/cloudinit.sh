@@ -18,6 +18,10 @@ service hostname start
 # Fancy prompt courtesy of @soulshake.
 echo 'export PS1="\[\033[0;35m\]\u@\H \[\033[0;33m\]\w\[\033[0m\]: "' >> /etc/skel/.bashrc
 
+# export swarm token
+export SWARM_ID=##SWARM_ID##
+echo 'export SWARM_ID=$SWARM_ID' >> /etc/skel/.bashrc
+
 # Create Docker user.
 useradd -d /home/docker -m -s /bin/bash docker
 
@@ -44,8 +48,6 @@ pip install -U docker-compose
 # Link so that older versions of the training still work properly
 ln -s /usr/local/bin/docker-compose /usr/local/bin/fig
 
-export SWARM_ID=##SWARM_ID##
-
 # Wait for docker to be up.
 # If we don't do this, Docker will not be responsive during the next step.
 while ! docker version
@@ -53,9 +55,13 @@ do
 	sleep 1
 done
 
+# git clone our repo
+git clone https://github.com/ZenikaOuest/talk-docker-insight.git /home/docker/talk-docker-insight/
+sudo chown -R docker /home/docker/talk-docker-insight
+
 # Pre-pull a bunch of images.
 for I in \
-	swarm ubuntu:latest postgres redis nginx
+	swarm ubuntu:latest postgres redis nginx emilevauge/traefik ggerbaud/hello-hostname python:3.5.0-onbuild docker/whalesay
 do
 	docker pull $I
 done
