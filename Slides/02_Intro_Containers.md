@@ -16,7 +16,7 @@
 
 
 
-## Avant 1960
+## Après 1960
 
 ![](ressources/intermodal-shipping-container.png)
 
@@ -25,12 +25,6 @@
 ## Avant Docker
 
 ![](ressources/the-challenge.png)
-
-
-
-## Avant Docker
-
-![](ressources/the-matrix-from-hell.png)
 
 
 
