@@ -52,7 +52,8 @@ redis:
 Easy setup & well configured !
 
 ![](https://docs.docker.com/engine/installation/images/linux_docker_host.svg)
-![](https://docs.docker.com/engine/installation/images/windows_docker_host.svg)
+
+![](https://docs.docker.com/engine/installation/images/win_docker_host.svg)
 
 
 # docker kitematic
