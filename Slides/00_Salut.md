@@ -15,7 +15,7 @@
 - Consultant chez Yves Rocher
 - Dev ⇨ Ops
 - Java ⇨ Docker
-- OSS contributer
+- OSS contributor
 
 
 
@@ -26,3 +26,27 @@
 - SI Zenika
 - Java ⇨ Microservices ⇨ Docker
 - Dev ⇨ <span style="font-size: 0.5em">Ops</span>
+
+
+
+## &nbsp;
+
+Présentation: https://zenikaouest.github.io/talk-docker-insight/ 
+
+<hr/>
+
+Sources: https://github.com/ZenikaOuest/talk-docker-insight
+
+ - node
+ - npm
+ - grunt
+ - gulp
+ - reveal.js
+
+<br/>
+```
+git clone https://github.com/ZenikaOuest/talk-docker-insight
+make
+```
+
+
