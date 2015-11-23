@@ -71,6 +71,7 @@ Complétement isolé
 - Imported from tarball (ubuntu, centos, ...)
 - Built with `docker commit`
 - Built with  *Dockerfile*
+- read-only 
 
 ![](ressources/images-layer.png)
 
@@ -100,9 +101,7 @@ EXPOSE 8080
 
 
 
-## Run my first container
-
-Select an image an push it in a container !
+## My first container
 
 <br/>
 ```
@@ -126,8 +125,23 @@ $ docker run docker/whalesay cowsay "big up @orange !"
 
 
 
-## Run deeper
+## En pratique
 
+- Pull / "Aggregate file system"
+- Add read-write layer
+- Copy on write
+- Bind ports
+- Bind volumes
+- Start command
+- Name / sha256
+
+<figure style="position: absolute; bottom: 100px; right: 150px;">
+    <img src="ressources/container-layer.png" alt="docker-hack-day"/>
+</figure>
+
+
+
+## En pratique CLI
 
 Options: 
 

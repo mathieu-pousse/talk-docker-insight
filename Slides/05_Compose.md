@@ -1,5 +1,11 @@
 # docker ecosystème
 
+<figure style="position: absolute; bottom: 10px; right: 200px">
+    <img src="ressources/ecosystem.jpg" alt="Logo Docker" width="650" />
+</figure>
+
+
+
 # docker compose
 
 <figure style="position: absolute; bottom: 50px; right: 400px">
@@ -12,12 +18,16 @@
 
 Permet de démarrer plusieurs containers simultanement
 
+<br/>
 Idéal pour le developpement
 
+<br/>
 Fichier de configuration yaml simple
 
+<br/>
 Image, liens, volumes, # instances
 
+<br/>
 Controle un ensemble cohérent de container
 
 
@@ -39,28 +49,39 @@ redis:
 
 
 
+# Demo time
+
+![](ressources/fingers-crossed.png)
+
+
+
 # docker machine
 
 <figure style="position: absolute; bottom: 50px; right: 400px">
-    <img src="https://github.com/docker/machine/blob/master/docs/img/logo.png" alt="Logo Docker" width="460" />
+    <img src="ressources/logo-machine.png" alt="Logo Docker" width="460" />
 </figure>
 
 
 
 # docker machine
 
-Easy setup & well configured !
+<br/><br/><br/><br/><br/>
+Easy setup & well configured for Linux, Windows, MacOS, Google, AWS, ...
 
-![](https://docs.docker.com/engine/installation/images/linux_docker_host.svg)
+<figure style="position: absolute; bottom: 50px; right: 150px">
+    <img src="https://docs.docker.com/engine/installation/images/linux_docker_host.svg" alt="Logo Docker" />
+</figure>
 
-![](https://docs.docker.com/engine/installation/images/win_docker_host.svg)
+<figure style="position: absolute; bottom: 50px; right: 600px">
+    <img src="https://docs.docker.com/engine/installation/images/win_docker_host.svg" alt="Logo Docker" />
+</figure>
+
 
 
 # docker kitematic
 
-<figure style="position: absolute; bottom: 50px; right: 400px">
+<figure style="position: absolute; bottom: 150px; right: 350px">
     <img src="https://pbs.twimg.com/profile_images/505211933666975745/ZyasF8Em_400x400.png" alt="Logo Docker" width="460" />
-    Windows & MacOS
 </figure>
 
 
@@ -85,7 +106,8 @@ Easy setup & well configured !
 
 # docker toolbox
 
-![All in one !](https://www.docker.com/sites/default/files/products/tbox.jpg)
-
+<figure style="position: absolute; bottom: 150px; right: 350px">
+    <img src="https://www.docker.com/sites/default/files/products/tbox.jpg" alt="Logo Docker" />
+</figure>
 
 

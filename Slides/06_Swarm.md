@@ -12,10 +12,10 @@ Gère des clusters d'hôte docker
 
 Basé sur l'API de docker (compatible avec compose)
 
-1. ouvrir le daemon docker sur TCP
-2. configurer TLS
-3. 1 master
-4. x nodes
+  1. ouvrir le daemon docker sur TCP
+  2. configurer TLS
+  3. 1 manager
+  4. x nodes
 
 <br/>
 La création / répartition des containers est à la charge de swarm
