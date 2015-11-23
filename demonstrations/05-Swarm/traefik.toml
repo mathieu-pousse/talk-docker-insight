@@ -1,0 +1,7 @@
+logLevel = "DEBUG"
+[web]
+address = ":8080"
+[docker]
+endpoint = "tcp://127.0.0.1:2376"
+domain = "docker.localhost"
+watch = true

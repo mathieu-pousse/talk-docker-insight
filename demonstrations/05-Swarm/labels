@@ -1,0 +1,3 @@
+traefik.backend=back
+traefik.frontend.rule=Host
+traefik.frontend.value=localhost
