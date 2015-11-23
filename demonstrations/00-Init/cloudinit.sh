@@ -20,7 +20,7 @@ echo 'export PS1="\[\033[0;35m\]\u@\H \[\033[0;33m\]\w\[\033[0m\]: "' >> /etc/sk
 
 # export swarm token
 export SWARM_ID=##SWARM_ID##
-echo 'export SWARM_ID=$SWARM_ID' >> /etc/skel/.bashrc
+echo "export SWARM_ID=$SWARM_ID" >> /etc/skel/.bashrc
 
 # Create Docker user.
 useradd -d /home/docker -m -s /bin/bash docker
@@ -61,7 +61,7 @@ sudo chown -R docker /home/docker/talk-docker-insight
 
 # Pre-pull a bunch of images.
 for I in \
-	swarm ubuntu:latest postgres redis nginx emilevauge/traefik ggerbaud/hello-hostname python:3.5.0-onbuild docker/whalesay
+	swarm ubuntu:latest postgres redis nginx tomcat:7 emilevauge/traefik ggerbaud/hello-hostname ggerbaud/pyredis python:3.5.0-onbuild docker/whalesay
 do
 	docker pull $I
 done

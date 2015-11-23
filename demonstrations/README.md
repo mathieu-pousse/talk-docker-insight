@@ -7,6 +7,7 @@ export SWARM_ID=$(docker run --rm swarm create)
 ./container_ec2setup.sh start 2
 ## attendre suffisament
 ssh docker@<ip VM>
+docker rm <id du noeud swarm>
 cd talk-docker-insight/demonstrations/04-Compose
 docker-compose up
 ### quand OK Ctrl+c
@@ -36,7 +37,7 @@ curl http://localhost:8080
 docker stop <id>
 # il est caché...
 docker ps
-# ...meuh non 
+# ...meuh non
 docker ps -a
 docker start <id>
 ```
@@ -47,16 +48,25 @@ Le principe est que l'appli est à la fois packagée dans une image Docker et mo
 
 ```bash
 cd 02-Dev-Env
+# check Dockerfile et onbuild
+vi Dockerfile
 docker build -t my-killer-app .
 docker run -d -p 80:5000 -e DEV_MODE=true --volume ${PWD}:/usr/src/app my-killer-app
 curl localhost/hello/Orange
 ## change the returned message and F5
+vi hello-server.py
+# re curl...
+docker ps
+docker rm -f <id>
 cd ..
 ```
 
 ## DEMO 3 : Links
 ```bash
-docker run --name cache redis
+vi app.py
+docker run -d --name cache redis
+docker run -d -p 5000:5000 --links cache:redis ggerbaud/pyredis
+curl localhost:5000
 ```
 
 ## DEMO 4 : Compose
@@ -81,6 +91,8 @@ cd 05-Swarm
 # Si on doit rejoindre le cluster
 docker run -d swarm join --addr=$(curl -sf http://ipinfo.io/ip):2375 token://$SWARM_ID
 #
+# on affiche qu'on est un noeud
+docker ps
 # on crée un manager pour le cluster (port 2376)
 docker run -d -p 2376:2375 swarm manage token://$SWARM_ID
 # mise en place de traefik (NOTA : on le fait localement, hors swarm)
@@ -98,7 +110,7 @@ docker ps
 # s'y connecter
 # contraintes
 # noeud
-docker run -d --label-file labels -e constraint:node==node1 ggerbaud/hello-hostname
+docker run -d --label-file labels -e constraint:node==<mon ip> ggerbaud/hello-hostname
 ```
 ## DEMO BONUS
 
