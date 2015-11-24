@@ -88,19 +88,19 @@ Easy setup & well configured for Linux, Windows, MacOS, Google, AWS, ...
 
 ## gui for docker #1
 
-![](https://docs.docker.com/kitematic/images/browse-images.png)
+![](ressources/kitematic-browse-images.png)
 
 
 
-# gui for docker #2
+## gui for docker #2
 
-![](https://docs.docker.com/kitematic/images/cli-redis-container.png)
+![](ressources/kitematic-cli-redis-container.png)
 
 
 
-# gui for docker #3
+## gui for docker #3
 
-![](https://docs.docker.com/kitematic/images/volumes-dir.png)
+![](ressources/kitematic-volumes-dir.png)
 
 
 
