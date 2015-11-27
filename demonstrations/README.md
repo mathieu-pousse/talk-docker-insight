@@ -93,14 +93,14 @@ docker run -d swarm join --addr=$(curl -sf http://ipinfo.io/ip):2375 token://$SW
 #
 # on affiche qu'on est un noeud
 docker ps
-# on crée un manager pour le cluster (port 2376)
-docker run -d -p 2376:2375 swarm manage token://$SWARM_ID
+# on crée un manager pour le cluster (port 2377)
+docker run -d -p 2377:2375 swarm manage token://$SWARM_ID
 # mise en place de traefik (NOTA : on le fait localement, hors swarm)
 docker run -d -p 8080:8080 -p 80:80 -v $PWD/traefik.toml:/traefik.toml --net=host emilevauge/traefik
 # on change le host sur lequel est branché le client
 export OLD_DOCKER_HOST=$DOCKER_HOST
-export DOCKER_HOST=tcp://localhost:2376
-# on affiche les infos du cluster (6 noeuds normalement)
+export DOCKER_HOST=tcp://localhost:2377
+# on affiche les infos du cluster (2 noeuds normalement)
 docker version
 docker info
 docker ps
