@@ -105,9 +105,9 @@ EXPOSE 8080
 
 <br/>
 ```
-$ docker run docker/whalesay cowsay "big up @orange !"
+$ docker run docker/whalesay cowsay "big up @laposte"
  __________________ 
-< big up @orange ! >
+< big up @laposte >
  ------------------ 
     \
      \
