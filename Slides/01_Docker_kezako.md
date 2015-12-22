@@ -13,10 +13,10 @@
 - **décembre 2013:** Google Compute Engine supporte Docker
 - **avril 2014:** Amazon Web Service supporte Docker
 - **octobre 2014:** Partnership avec Microsoft
+- **avril 2015:** Zenika, partenaire officielle Docker et première formation FR
 - **novembre 2015:** 
-  - Docker con @Barcelone 
+  - DockerConEU @Barcelone 
   - Docker 1.9
-  - Docker con @Orange
 
 
 
@@ -28,6 +28,9 @@
 - 200M+ Docker Engine downloads
 - 1000+ développeurs de la communauté ont contribué
 
+<figure style="position: absolute; bottom: 50; left: 20px;">
+    <img width="50%" src="ressources/docker-nantes.jpeg" alt="docker-hack-day"/>
+</figure>
 <figure style="position: absolute; bottom: 100px; right: 50px;">
     <img src="ressources/doker-meetup.jpeg" alt="docker-hack-day"/>
 </figure>

@@ -80,8 +80,11 @@ Easy setup & well configured for Linux, Windows, MacOS, Google, AWS, ...
 
 # docker kitematic
 
-<figure style="position: absolute; bottom: 150px; right: 350px">
-    <img src="https://pbs.twimg.com/profile_images/505211933666975745/ZyasF8Em_400x400.png" alt="Logo Docker" width="460" />
+<figure style="position: absolute; bottom: 150px; right: 250px">
+    <img src="https://pbs.twimg.com/profile_images/505211933666975745/ZyasF8Em_400x400.png" alt="Logo Docker" width="350" />
+</figure>
+<figure style="position: absolute; bottom: 150px; left: 250px">
+    <img src="ressources/product_kitematic.png" alt="Logo Docker" width="350" />
 </figure>
 
 
