@@ -20,6 +20,6 @@
 - Dév Java / Web ⇨ Intégration applicative ⇨ <span style="font-size: 0.5em">Devops</span> 
 
 <br><br>
-- Slides from @m_pousse et @ggerbaud - Zenika Rennes
+- Slides forked from @m_pousse et @ggerbaud - Zenika Rennes
 
 
