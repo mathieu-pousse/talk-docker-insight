@@ -4,6 +4,9 @@
     <img src="ressources/ecosystem.jpg" alt="Logo Docker" width="650" />
 </figure>
 
+Notes :
+L'ensemble des outils ci après sont OSS et gratuits
+
 
 
 # docker compose
@@ -16,10 +19,10 @@
 
 ## Use case
 
-Permet de démarrer plusieurs containers simultanement
+Permet de démarrer plusieurs conteneurs simultanément
 
 <br/>
-Idéal pour le developpement
+Idéal pour le développement
 
 <br/>
 Fichier de configuration yaml simple
@@ -28,7 +31,7 @@ Fichier de configuration yaml simple
 Image, liens, volumes, # instances
 
 <br/>
-Controle un ensemble cohérent de container
+Contrôle un ensemble cohérent de conteneur
 
 
 

@@ -6,6 +6,30 @@
 
 
 
+## Conteneur
+
+- Environnement d'exécution isolé
+- Très faible empreinte mémoire
+- Concept éprouvé depuis de nombreuses années
+  - "Zone" sous Solaris
+  - "Jail" sous BSD
+  - "Workload Partitions" sous AIX
+  - Utilisation du Noyau linux
+
+Notes : 
+Environnement d'exécution isolé = ~chroot linux
+Noyau linux : primitives implémentées depuis 2008
+
+
+
+## VMs vs Conteneurs
+
+<br/>
+
+![](ressources/vm-vs-docker.png)
+
+
+
 ## Architecture
 
 - Développé en Go
@@ -25,43 +49,42 @@
 
 
 
-## VMs vs Containers
+## Concepts
 
-<br/>
-
-![](ressources/vm-vs-docker.png)
+- **Image**: Ensemble des données / méta données nécessaires au fonctionnement (~ template / read-only)
+- **Registry**: Dépôt d'image (public / private)
+- **Conteneur**: Instance d'une image
+- **Volumes**: Accès au FS de l'hôte
+- **Links / Networks**: Partage de la stack réseau entre conteneurs
 
 <!-- .element: class="align-right" -->
 /Repeat after me/ *Containers ARE NOT VMs !*
 
 
 
-## Concepts
-
-- **Image**: Ensemble des données / méta données nécessaires au fonctionnement (~ template / read-only)
-- **Registry**: Dépôt d'image (public / private)
-- **Container**: Instance d'une image
-- **Volumes**: Accès au FS de l'hôte
-- **Links / Networks**: Partage de la stack réseau entre containers
-
-
-
 ## Basics
 
+<br/>
+L'image contient le nécessaire pour faire fonctionner le conteneur
 
 <br/>
-L'image contient le necessaire pour faire fonctionner le container
+Le cycle de vie d'un conteneur est directement liée à l'exécution de la commande principale.
 
 <br/>
-La commande executée au lancement du container définit le cycle de vie du container
-
-<br/>
+Droit root par défaut dans un conteneur, il est tout de même recommandé d'utiliser un utilisateur dédié
 ```
 $ id
 uid=0(root) gid=0(root) groups=0(root)
 ```
+
 <br/>
-Complétement isolé
+Philosophie : Un seul et unique service (apache, tomcat, nginx, redis...) s'exécute dans un conteneur
+
+=> Favorise la scalabilité horizontale
+
+Notes :
+Complétement isolé et n'a pas accès par défaut à la machine hôte ni aux autres conteneurs (comme les VMs)
+Pas de ssh, pas de Chef ou Vagrant
 
 
 
@@ -71,7 +94,7 @@ Complétement isolé
 - Imported from tarball (ubuntu, centos, ...)
 - Built with `docker commit`
 - Built with  *Dockerfile*
-- read-only 
+- read-only
 
 ![](ressources/images-layer.png)
 
@@ -85,7 +108,7 @@ MAINTAINER Alen Komljen <alen.komljen@live.com>
 
 RUN \
   wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key \
-       | apt-key add - 
+       | apt-key add -
 RUN echo "deb http://pkg.jenkins-ci.org/debian binary/" \
        > /etc/apt/sources.list.d/jenkins.list
 RUN apt-get update
@@ -143,11 +166,11 @@ $ docker run docker/whalesay cowsay "big up @CBP"
 
 ## En pratique CLI
 
-Options: 
+Options:
 
  - ``-it``: interactive container
  - ``-d``: detach container from client and continue as a daemon
- - ``--name``: name of the container 
+ - ``--name``: name of the container
  - ``--rm``: remove container when terminated
  - ``-p``: publish port <host>:<container>
  - ``--volume``: deal with volumes
@@ -157,31 +180,25 @@ Options:
 
 ## Quick start
 
-- Récupérer une image: 
+- Récupérer une image:
 
 ```
 docker pull ubuntu:15.04
 ```
 
-- Lancer une instance: 
+- Lancer une instance:
 
 ```
 docker run --rm -it ubuntu:15.04 bash
 ```
 
-- Lister les instances: 
+- Lister les instances:
 
 ```
 docker ps
 ```
 
-- Supprimer une instance: 
-
-```
-docker rm <container-name-or-id>
-```
-
-- Démarrer / Arrêter une instance: 
+- Démarrer / Arrêter une instance:
 
 ```
 docker stop  <container-name-or-id>
@@ -208,7 +225,7 @@ docker start <container-name-or-id>
 
 
 
-# Résumé 
+# Résumé
 
 ![](https://docs.docker.com/v1.8/article-img/architecture.svg)
 
@@ -217,5 +234,3 @@ docker start <container-name-or-id>
 # Demo time
 
 ![](ressources/fingers-crossed.png)
-
-
