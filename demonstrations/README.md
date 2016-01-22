@@ -19,8 +19,8 @@ docker-compose rm
 
 ```bash
 docker pull busybox
-docker run busybox echo "Hello Orange !"
-docker run docker/whalesay cowsay "Hello Orange !"
+docker run busybox echo "Hello CBP"
+docker run docker/whalesay cowsay "Hello CBP"
 cd 01-First-build
 docker build -t wgetip .
 docker run wgetip
@@ -52,7 +52,7 @@ cd 02-Dev-Env
 vi Dockerfile
 docker build -t my-killer-app .
 docker run -d -p 80:5000 -e DEV_MODE=true --volume ${PWD}:/usr/src/app my-killer-app
-curl localhost/hello/Orange
+curl localhost/hello/CBP
 ## change the returned message and F5
 vi hello-server.py
 # re curl...
@@ -65,7 +65,7 @@ cd ..
 ```bash
 vi app.py
 docker run -d --name cache redis
-docker run -d -p 5000:5000 --links cache:redis ggerbaud/pyredis
+docker run -d -p 5000:5000 --link cache:redis ggerbaud/pyredis
 curl localhost:5000
 ```
 
