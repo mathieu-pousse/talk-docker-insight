@@ -70,9 +70,17 @@ Avantages d'utiliser Docker en production :
 
 
 
+# Docker Birthday #3 <br/> 21-26th March
+
+<figure style="position: absolute; bottom: 80px; right: 180px">
+  <img src="ressources/docker-birthday3.png" alt="birthday Docker" width="750" />
+</figure>
+
+
+
 # Questions ?
 
 <figure style="position: absolute; bottom: 80px; right: 180px">
 	<img src="ressources/university.png" alt="Logo Docker" width="750" />
-	<center>**@jlandure** / **@bfontaine**</center>
+	<center>**@jlandure**</center>
 </figure>
