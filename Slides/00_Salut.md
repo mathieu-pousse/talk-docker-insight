@@ -8,12 +8,19 @@
 
 
 
-## Julien Landuré - @jlandure 
+## Julien Landuré - @jlandure
 
-- Formateur Docker @zenika
+- Formateur Docker @Zenika
 - CTO Zenika Nantes
 - Dév Java / Web / <span style="font-size: 0.5em">NodeJS & Go</span> ⇨ Microservices ⇨ Docker
 - Dev ⇨ <span style="font-size: 0.5em">Ops</span>
+
+## Laurent Maillet - @Nebounet
+
+- Formateur Web @Zenika Nantes
+- Dév Java / AngularJS & NodeJS
+- Aime Docker : Dev ⇨ <span style="font-size: 0.5em">Ops</span>
+
 
 <br><br>
 - Slides forked from @m_pousse et @ggerbaud - Zenika Rennes

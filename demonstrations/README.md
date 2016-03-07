@@ -19,8 +19,8 @@ docker-compose rm
 
 ```bash
 docker pull busybox
-docker run busybox echo "Hello CBP"
-docker run docker/whalesay cowsay "Hello CBP"
+docker run busybox echo "Hello Sparklane"
+docker run docker/whalesay cowsay "Hello Sparklane"
 cd 01-First-build
 docker build -t wgetip .
 docker run wgetip
@@ -28,6 +28,8 @@ docker run wgetip ipinfo.io/hostname
 cd ..
 # on lance un tomcat
 docker run -d -p 8080:8080 tomcat:7
+# allez dedans et regarder
+docker exec -ti bash XXX
 # on vérifie que ça tourne
 docker ps
 # on l'affiche
