@@ -29,9 +29,13 @@ cd ..
 # on lance un tomcat
 docker run -d -p 8080:8080 tomcat:7
 # allez dedans et regarder
-docker exec -ti bash XXX
+docker exec -ti XX bash
 # on vérifie que ça tourne
 docker ps
+# on affiche des infos
+docker info 
+docker version
+docker inspect
 # on l'affiche
 curl http://localhost:8080
 # et aussi http://<ip VM>:8080
