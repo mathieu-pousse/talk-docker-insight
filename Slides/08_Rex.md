@@ -61,7 +61,7 @@ Avantages d'utiliser Docker en production :
 
 # Docker @ Zenika
 
-- Formation officielle Docker le 17 Mars et le 16 Juin à Nantes
+- Formation officielle Docker le 16 Juin à Nantes
 - Atelier "Dockeriser mon app pour le Dev" : 2 à 3j
 - Atelier "Sensibilisation Docker pour les Ops " : 1 à 2j
 
