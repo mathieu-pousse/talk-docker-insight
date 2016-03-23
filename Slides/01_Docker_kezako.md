@@ -14,9 +14,8 @@
 - **avril 2014:** Amazon Web Service supporte Docker
 - **octobre 2014:** Partnership avec Microsoft
 - **avril 2015:** Zenika, partenaire officielle Docker et première formation FR
-- **novembre 2015:** 
-  - DockerConEU @Barcelone 
-  - Docker 1.9
+- **novembre 2015:** DockerConEU @Barcelone & Docker 1.9
+- **février 2016:** Docker 1.10
 
 
 

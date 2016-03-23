@@ -1,4 +1,4 @@
-## INIT
+## INIT - not run !
 Sur machine locale
 ```bash
 cd 00-Init
@@ -19,8 +19,8 @@ docker-compose rm
 
 ```bash
 docker pull busybox
-docker run busybox echo "Hello Sparklane"
-docker run docker/whalesay cowsay "Hello Sparklane"
+docker run busybox echo "Hello showroom"
+docker run docker/whalesay cowsay "Hello showroom"
 cd 01-First-build
 docker build -t wgetip .
 docker run wgetip
@@ -57,8 +57,8 @@ cd 02-Dev-Env
 # check Dockerfile et onbuild
 vi Dockerfile
 docker build -t my-killer-app .
-docker run -d -p 80:5000 -e DEV_MODE=true --volume ${PWD}:/usr/src/app my-killer-app
-curl localhost/hello/CBP
+docker run -d -p 80:5000 -e DEV_MODE=true --volume $(pwd):/usr/src/app showroom/my-killer-app
+curl localhost/hello/showroom
 ## change the returned message and F5
 vi hello-server.py
 # re curl...
@@ -71,7 +71,7 @@ cd ..
 ```bash
 vi app.py
 docker run -d --name cache redis
-docker run -d -p 5000:5000 --link cache:redis ggerbaud/pyredis
+docker run -d -p 5000:5000 --link cache:redis showroom/my-killer-app2
 curl localhost:5000
 ```
 
@@ -90,7 +90,7 @@ docker-compose up
 cd ..
 ```
 
-## DEMO 5 : Swarm
+## DEMO 5 : Swarm - not run!!
 
 ```bash
 cd 05-Swarm

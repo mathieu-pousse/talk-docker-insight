@@ -16,10 +16,9 @@ Avantages d'utiliser Docker sur le poste de Dev :
 <figure style="position: absolute; bottom: 350px;">
 	<img src="ressources/restlet.png" alt="Logo Docker" width="300" />
 </figure>
-<!--<figure style="position: absolute; bottom: 340px; left:410px">
+<figure style="position: absolute; bottom: 340px; left:410px">
 	<img src="ressources/zebaz.png" alt="Logo Docker" width="300" />
 </figure>
--->
 <figure style="position: absolute; bottom: 345px; left:730px">
 	<img src="ressources/zenika.png" alt="Logo Docker" width="300" />
 </figure>
@@ -39,15 +38,14 @@ Avantages d'utiliser Docker en production :
 
 * Même langage que le Dev
 * Conteneur = Unité logique Ops
+* mais aussi Auchan, Sanofi, Alptis
 
 <figure style="position: absolute; bottom: 300px;">
 	<img src="ressources/yvesrocher.png" alt="Logo Docker" width="300" />
 </figure>
-<!--
 <figure style="position: absolute; bottom: 300px; left:410px">
 	<img src="ressources/zebaz.png" alt="Logo Docker" width="300" />
 </figure>
--->
 <figure style="position: absolute; bottom: 300px; left:730px">
 	<img src="ressources/laposte.png" alt="Logo Docker" width="300" />
 </figure>
@@ -85,5 +83,5 @@ Avantages d'utiliser Docker en production :
 
 <figure style="position: absolute; bottom: 80px; right: 180px">
 	<img src="ressources/university.png" alt="Logo Docker" width="750" />
-	<center>**@jlandure** / **@Nebounet**</center>
+	<center>**@eric_briand**</center>
 </figure>
