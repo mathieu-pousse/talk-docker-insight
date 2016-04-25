@@ -16,7 +16,7 @@
   - "Workload Partitions" sous AIX
   - Utilisation du Noyau linux
 
-Notes : 
+Notes :
 Environnement d'exécution isolé = ~chroot linux
 Noyau linux : primitives implémentées depuis 2008
 
@@ -65,22 +65,17 @@ Noyau linux : primitives implémentées depuis 2008
 ## Basics
 
 <br/>
-L'image contient le nécessaire pour faire fonctionner le conteneur
+L'image contient le nécessaire pour faire fonctionner le conteneur.
 
 <br/>
 Le cycle de vie d'un conteneur est directement liée à l'exécution de la commande principale.
 
 <br/>
-Droit root par défaut dans un conteneur, il est tout de même recommandé d'utiliser un utilisateur dédié
-```
-$ id
-uid=0(root) gid=0(root) groups=0(root)
-```
+Droit root par défaut dans un conteneur.
 
 <br/>
-Philosophie : Un seul et unique service (apache, tomcat, nginx, redis...) s'exécute dans un conteneur
+Philosophie : Un seul et unique service (apache, tomcat, nginx, redis...) s'exécute dans un conteneur.
 
-=> Favorise la scalabilité horizontale
 
 Notes :
 Complétement isolé et n'a pas accès par défaut à la machine hôte ni aux autres conteneurs (comme les VMs)
@@ -129,9 +124,9 @@ EXPOSE 8080
 <br/>
 ```
 $ docker run docker/whalesay cowsay "big up @Sparklane"
- __________________ 
+ __________________
 < big up @Sparklane >
- ------------------ 
+ ------------------
     \
      \
       \     

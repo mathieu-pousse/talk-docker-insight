@@ -31,7 +31,7 @@ Fichier de configuration yaml simple
 Image, liens, volumes, # instances
 
 <br/>
-Contrôle un ensemble cohérent de conteneur
+Contrôle un ensemble cohérent de conteneurs
 
 
 
@@ -83,6 +83,9 @@ Easy setup & well configured for Linux, Windows, MacOS, Google, AWS, ...
 
 # docker kitematic
 
+<br/><br/><br/><br/><br/>
+Pour Mac (Windows, coming soon)
+
 <figure style="position: absolute; bottom: 150px; right: 250px">
     <img src="https://pbs.twimg.com/profile_images/505211933666975745/ZyasF8Em_400x400.png" alt="Logo Docker" width="350" />
 </figure>
@@ -92,19 +95,19 @@ Easy setup & well configured for Linux, Windows, MacOS, Google, AWS, ...
 
 
 
-## gui for docker #1
+## kitematic, gui for docker #1
 
 ![](ressources/kitematic-browse-images.png)
 
 
 
-## gui for docker #2
+## kitematic, gui for docker #2
 
 ![](ressources/kitematic-cli-redis-container.png)
 
 
 
-## gui for docker #3
+## kitematic, gui for docker #3
 
 ![](ressources/kitematic-volumes-dir.png)
 
@@ -112,8 +115,9 @@ Easy setup & well configured for Linux, Windows, MacOS, Google, AWS, ...
 
 # docker toolbox
 
+<br/><br/><br/><br/><br/>
+Pour Mac et Windows. Inclut Docker, Compose, Machine, Kitematic.
+
 <figure style="position: absolute; bottom: 150px; right: 350px">
     <img src="https://www.docker.com/sites/default/files/products/tbox.jpg" alt="Logo Docker" />
 </figure>
-
-

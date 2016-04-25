@@ -1,0 +1,22 @@
+éclaircir les termes de "docker-isolation-small.png" (libcontainer, libvirt
+lxc, systemd-nsspawn)
+
+ajouter des architecture use cases (Alptis) ou des use cases fréquent (Environnement
+de dev avec Docker Compose, architecture web service REST, etc)
+
+couvrir Docker Registry (slides + démo)
+
+Dockerfile :
+  instructions VOLUME
+
+"En pratique" : copy on write
+
+Couvrir : résumé les avantages, overview au sein d'une entreprise
+
+Docker machine
+
+MAJ 07 News
+
+Couvrir Swarm (slides en plus et démo ?)
+
+DONE
