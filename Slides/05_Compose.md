@@ -58,6 +58,15 @@ redis:
 
 
 
+# docker registry
+
+<figure style="position: absolute; bottom: 200px; right: 200px">
+    <img src="ressources/docker-registry.png" alt="Docker Registry" width="800" />
+</figure>
+
+
+
+
 # docker machine
 
 <figure style="position: absolute; bottom: 50px; right: 400px">

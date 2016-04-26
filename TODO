@@ -3,7 +3,7 @@
 ajouter des architecture use cases (Alptis) ou des use cases fréquent (Environnement
 de dev avec Docker Compose, architecture web service REST, etc)
 
-couvrir Docker Registry (slides + démo)
+couvrir Docker Registry (démo)
 
 Dockerfile :
   instructions VOLUME
@@ -30,3 +30,5 @@ Docker machine
 
 éclaircir les termes de "docker-isolation-small.png" (libcontainer, libvirt
 lxc, systemd-nsspawn)
+
+couvrir Docker Registry (slides)
