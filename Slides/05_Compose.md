@@ -66,6 +66,15 @@ redis:
 
 
 
+# docker machine, cas d'utilisation
+
+<br/><br/><br/><br/><br/><br/>
+Pour utiliser Docker facilement sous Mac et Windows
+
+Pour installer Docker sur des machines distantes (des "machines")
+
+
+
 # docker machine
 
 <br/><br/><br/><br/><br/>
