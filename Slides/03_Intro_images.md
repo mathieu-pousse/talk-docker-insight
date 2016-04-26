@@ -48,6 +48,19 @@ Noyau linux : primitives implémentées depuis 2008
 ![](ressources/docker-isolation-small.png)
 
 
+Notes :
+libcontainer : Libcontainer enables containers to work with Linux namespaces, control groups, capabilities, AppArmor, security profiles, network interfaces and firewalling rules in a consistent and predictable way. (http://jancorg.github.io/blog/2015/01/03/libcontainer-overview/)
+libvirt : A toolkit to interact with the virtualization capabilities of recent versions of Linux (and other OSes) (https://libvirt.org/)
+LXC (Linux Containers) is an operating-system-level virtualization method for running multiple isolated Linux systems (containers) on a control host using a single Linux kernel.
+systemd-nspawn may be used to run a command or OS in a light-weight namespace container. (https://www.freedesktop.org/software/systemd/man/systemd-nspawn.html)
+cgroups : Control Groups, or cgroups for short, allow you to set limits on resources for processes and their children. This is the mechanism that Docker uses to control limits on
+memory, swap, and CPU resources.
+Namespaces take a single global resource and make it appear as a single owned resource to the container.
+Netlink socket family is a Linux kernel interface used for inter-process communication (IPC) between both the kernel and userspace processes, and between different userspace processes, in a way similar to the Unix domain sockets. Netlink is designed and used for transferring miscellaneous networking information between the kernel space and userspace processes.
+Security-Enhanced Linux (SELinux) is a Linux kernel security module that provides a mechanism for supporting access control security policies. a set of kernel modifications and user-space tools that have been added to various Linux distributions.
+netfilter.org is home to the software of the packet filtering framework inside the Linux 2.4.x and later kernel series. Software inside this framework enables packet filtering, network address [and port] translation (NA[P]T) and other packet mangling.
+Capabilities (POSIX 1003.1e, capabilities(7)) provide fine-grained control over superuser permissions, allowing use of the root user to be avoided.
+AppArmor ("Application Armor") is a Linux kernel security module that allows the system administrator to restrict programs' capabilities with per-program profiles.
 
 ## Concepts
 
