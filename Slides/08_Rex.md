@@ -61,9 +61,20 @@ Avantages d'utiliser Docker en production :
 
 
 
+# Adoption, exemple des étapes
+
+- Utiliser Docker pour les environnements de dev (avec Compose)
+- Mettre en place un Docker Registry interne
+- Expérimenter une application en production
+  - Bon candidat : web service stateless
+  - Eviter les applications qui stockent des données (ex. : BD)
+  - Utiliser un OS "traditionnel" (Debian, CentOS)
+
+
+
 # Docker @ Zenika
 
-- Formation officielle Docker le 17 Mars et le 16 Juin à Nantes
+- Formation officielle Docker (sessions publiques et intra)
 - Atelier "Dockeriser mon app pour le Dev" : 2 à 3j
 - Atelier "Sensibilisation Docker pour les Ops " : 1 à 2j
 
@@ -85,5 +96,4 @@ Avantages d'utiliser Docker en production :
 
 <figure style="position: absolute; bottom: 80px; right: 180px">
 	<img src="ressources/university.png" alt="Logo Docker" width="750" />
-	<center>**@jlandure** / **@Nebounet**</center>
 </figure>

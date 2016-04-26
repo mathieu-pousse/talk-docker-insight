@@ -1,28 +1,22 @@
 
 
-ajouter des architecture use cases (Alptis) ou des use cases fréquent (Environnement
-de dev avec Docker Compose, architecture web service REST, etc)
+
 
 couvrir Docker Registry (démo)
 
-Dockerfile :
-  instructions VOLUME
 
-"En pratique" : copy on write
+
+
 
 Couvrir : résumé les avantages, overview au sein d'une entreprise
 
-Grille de lecture :
-  dev : docker seul, compose pour un environnement de dev rapide et proche
-  de la prod
-  production : système de provisionning (ansible & co, docker machine), pas
-  de contraintes sur l'OS (Debian, CentOS)
 
 MAJ 07 News
 
 Couvrir Swarm (slides en plus et démo ?)
 
 10 things to do with docker (http://developers.redhat.com/blog/2016/02/24/10-things-to-avoid-in-docker-containers/)
+
 
 DONE
 
@@ -32,3 +26,18 @@ Docker machine
 lxc, systemd-nsspawn)
 
 couvrir Docker Registry (slides)
+
+Dockerfile :
+  instructions VOLUME
+
+"En pratique" : copy on write
+
+ajouter des architecture use cases (Alptis) ou des use cases fréquent (Environnement
+de dev avec Docker Compose, architecture web service REST, etc) => REX déjà présents
+OK.
+
+Grille de lecture :
+  dev : docker seul, compose pour un environnement de dev rapide et proche
+  de la prod
+  production : système de provisionning (ansible & co, docker machine), pas
+  de contraintes sur l'OS (Debian, CentOS)

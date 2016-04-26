@@ -130,6 +130,9 @@ CMD ["/usr/bin/java", "-jar", "/usr/share/jenkins/jenkins.war", "--webroot=/root
 EXPOSE 8080
 ```
 
+Notes :
+The VOLUME instruction creates a mount point with the specified name and marks it as holding externally mounted volumes from native host or other containers.
+
 
 
 ## My first container
@@ -170,6 +173,9 @@ $ docker run docker/whalesay cowsay "big up @Sparklane"
     <img src="ressources/container-layer.png" alt="docker-hack-day"/>
 </figure>
 
+Notes :
+Copy-on-write is a similar strategy of sharing and copying. In this strategy, system processes that need the same data share the same instance of that data rather than having their own copy. At some point, if one process needs to modify or write to the data, only then does the operating system make a copy of the data for that process to use. Only the process that needs to write has access to the data copy. All the other processes continue to use the original data.
+
 
 
 ## En pratique CLI
@@ -183,6 +189,10 @@ Options:
  - ``-p``: publish port <host>:<container>
  - ``--volume``: deal with volumes
  - ``--link``: deal with links
+
+Notes :
+--link : permet de linker un conteneur à un autre (utiliser le nom d'hote
+du conteneur linké dans l'autre conteneur)
 
 
 
