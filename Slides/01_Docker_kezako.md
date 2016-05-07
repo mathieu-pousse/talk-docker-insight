@@ -16,6 +16,7 @@
 - **avril 2015:** Zenika, partenaire officielle Docker et première formation FR
 - **novembre 2015:** DockerConEU @Barcelone & Docker 1.9
 - **février 2016:** Docker 1.10
+- **avril 2016:** Docker 1.11
 
 
 

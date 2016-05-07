@@ -38,10 +38,3 @@ Reverse proxy pour avoir un seul point d'entrée
 ![](ressources/traefik.logo.svg)
 <center>https://traefik.io</center>
 
-
-
-# Demo time
-
-![](ressources/fingers-crossed.png)
-
-

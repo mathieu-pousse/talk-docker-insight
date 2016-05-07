@@ -2,9 +2,7 @@
   "00_Salut.md",
   "01_Docker_kezako.md",
   "02_Intro_Containers.md",
-  "03_Intro_images.md",
-  "04_Volumes_links.md",
-  "05_Compose.md",
+  "03_Ecosysteme.md",
   "06_Swarm.md",
   "07_News_1-9.md",
   "08_Rex.md"
