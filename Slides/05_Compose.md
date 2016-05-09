@@ -1,4 +1,4 @@
-# docker ecosystème
+# écosystème Docker
 
 <figure style="position: absolute; bottom: 10px; right: 200px">
     <img src="ressources/ecosystem.jpg" alt="Logo Docker" width="650" />
@@ -87,7 +87,7 @@ Pour installer Docker sur des machines distantes (des "machines")
 # docker machine
 
 <br/><br/><br/><br/><br/>
-Easy setup & well configured for Linux, Windows, MacOS, Google, AWS, ...
+Installation et configuration simple pour Linux, Windows, MacOS, Google, AWS, ...
 
 <figure style="position: absolute; bottom: 50px; right: 150px">
     <img src="https://docs.docker.com/engine/installation/images/linux_docker_host.svg" alt="Logo Docker" />
@@ -102,7 +102,7 @@ Easy setup & well configured for Linux, Windows, MacOS, Google, AWS, ...
 # docker kitematic
 
 <br/><br/><br/><br/><br/>
-Pour Mac (Windows, coming soon)
+GUI de gestion pour Mac et Windows
 
 <figure style="position: absolute; bottom: 150px; right: 250px">
     <img src="https://pbs.twimg.com/profile_images/505211933666975745/ZyasF8Em_400x400.png" alt="Logo Docker" width="350" />

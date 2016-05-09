@@ -6,13 +6,24 @@
 
 <!-- .slide: class="page-title" -->
 
+Slides forked from @m_pousse, @ggerbaud, @jlandure, @Nebounet, @acogoluegnes - Zenika Rennes, Nantes & Lyon
 
 
-## Arnaud Cogoluègnes
 
-- Directeur technique Zenika Lyon
-- Développeur Java
-- Spring Framework, Hadoop, Docker, etc
+## @srevereault
 
-<br><br>
-- Slides forked from @m_pousse, @ggerbaud, @jlandure, @Nebounet - Zenika Rennes & Nantes
+- Sylvain Révéreault
+- Consultant DevOps, Infra as Code, Cloud Computing
+- Directeur technique Zenika Rennes
+- (almost) Formateur Docker @zenika
+- Ops ⇨ <span style="font-size: 0.5em">Dev</span>
+
+
+
+## @ggerbaud
+
+- Guillaume Gerbaud
+- Formateur Docker @zenika
+- SI Zenika
+- Java ⇨ Microservices ⇨ Docker
+- Dev ⇨ <span style="font-size: 0.5em">Ops</span>

@@ -98,11 +98,11 @@ Pas de ssh, pas de Chef ou Vagrant
 
 ## Images
 
-- Downloaded from remote
-- Imported from tarball (ubuntu, centos, ...)
-- Built with `docker commit`
-- Built with  *Dockerfile*
-- read-only
+- Téléchargées depuis un dépôt
+- Importées depuis une archive "tarball" (ubuntu, centos, ...)
+- Construites depuis un `docker commit`
+- Construites depuis un *Dockerfile*
+- ...elles sont toujours en lecture seule
 
 ![](ressources/images-layer.png)
 
@@ -120,7 +120,7 @@ RUN \
 RUN echo "deb http://pkg.jenkins-ci.org/debian binary/" \
        > /etc/apt/sources.list.d/jenkins.list
 RUN apt-get update
-RUN apt-get -y install jenkins && rm -rf /var/lib/apt/lists/*
+RUN apt-get -y install jenkins && rm -rf /var/lib/apt/lists/
 
 VOLUME ["/root/.jenkins"]
 
@@ -135,14 +135,14 @@ The VOLUME instruction creates a mount point with the specified name and marks i
 
 
 
-## My first container
+## Mon premier conteneur
 
 <br/>
 ```
-$ docker run docker/whalesay cowsay "big up @Sparklane"
- __________________
-< big up @Sparklane >
- ------------------
+$ docker run docker/whalesay cowsay "big up @Technicolor"
+ _____________________
+< big up @Technicolor >
+ ---------------------
     \
      \
       \     
@@ -161,13 +161,13 @@ $ docker run docker/whalesay cowsay "big up @Sparklane"
 
 ## En pratique
 
-- Pull / "Aggregate file system"
-- Add read-write layer
-- Copy on write
-- Bind ports
-- Bind volumes
-- Start command
-- Name / sha256
+- Docker récupère ("pull") les couches de filesystem read-only
+- Il ajoute une couche en lecture écriture
+- Il met en place le "copy on write"
+- Il bind les ports
+- Il monte les volumes
+- Il génère un nom pour le conteneur (et un sha256)
+- Il lance la commande dans le conteneur
 
 <figure style="position: absolute; bottom: 100px; right: 150px;">
     <img src="ressources/container-layer.png" alt="docker-hack-day"/>
@@ -178,17 +178,17 @@ Copy-on-write is a similar strategy of sharing and copying. In this strategy, sy
 
 
 
-## En pratique CLI
+## En pratique - la CLI
 
 Options:
 
- - ``-it``: interactive container
- - ``-d``: detach container from client and continue as a daemon
- - ``--name``: name of the container
- - ``--rm``: remove container when terminated
- - ``-p``: publish port <host>:<container>
- - ``--volume``: deal with volumes
- - ``--link``: deal with links
+ - ``-it``: mode intéractif
+ - ``-d``: mode détaché ou "daemon"
+ - ``--name``: pour nommer le conteneur
+ - ``--rm``: pour supprimer le conteneur après exécution
+ - ``-p``: publication de port `<host>:<container>`
+ - ``--volume``: gestion des volumes
+ - ``--link``: gestion des links
 
 Notes :
 --link : permet de linker un conteneur à un autre (utiliser le nom d'hote
@@ -225,19 +225,19 @@ docker start <container-name-or-id>
 
 
 
-# Hub
+# Le Docker Hub
 
 ![](ressources/hub.docker-home.png)
 
 
 
-## Search
+## Moteur de recherche
 
 ![](ressources/hub.docker-search.png)
 
 
 
-## Search
+## Exemple d'entrée
 
 ![](ressources/hub.docker-details.png)
 

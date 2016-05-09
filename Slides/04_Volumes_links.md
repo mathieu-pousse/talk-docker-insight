@@ -38,7 +38,7 @@ Utilisation:
 ## Links
 
 <br/>
-Permet de facilement connecter des conteneurs au niveau du réseau.
+Permet de facilement connecter des conteneurs au niveau du réseau interne docker.
 
 <br/>
 Par défaut, les conteneurs sont isolés les uns des autres
@@ -48,6 +48,9 @@ Etanchéité des interfaces réseaux (une interface par conteneur)
 
 <br/>
 Se base sur les routes réseau (standard)
+
+<br/>
+⚠ Mécanisme "legacy" - a vocation a être remplacé par les "user-defined networks"
 
 
 
@@ -61,5 +64,3 @@ Se base sur les routes réseau (standard)
 # Demo time
 
 ![](ressources/fingers-crossed.png)
-
-

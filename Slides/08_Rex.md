@@ -57,7 +57,7 @@ Avantages d'utiliser Docker en production :
 <br>
 => Nouvel outil pour tout le monde : cohésion pour amener  une démarche DevOps & microservices
 <br>
-=> Facile de mixer du cloud public & privé
+=> Facilité de mixer du cloud public & privé
 
 
 

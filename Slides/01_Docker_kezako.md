@@ -12,11 +12,12 @@
 - **octobre 2013 :** dotCloud devient Docker Inc.
 - **décembre 2013:** Google Compute Engine supporte Docker
 - **avril 2014:** Amazon Web Service supporte Docker
-- **octobre 2014:** Partnership avec Microsoft
-- **avril 2015:** Zenika, partenaire officielle Docker et première formation FR
+- **octobre 2014:** Partenariat avec Microsoft
+- **avril 2015:** Zenika, partenaire officiel Docker et première formation FR
 - **novembre 2015:**
   - DockerConEU @Barcelone
   - Docker 1.9
+- **février 2016** Docker 1.10
 - **avril 2016:** Docker 1.11
 
 
