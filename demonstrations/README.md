@@ -19,8 +19,8 @@ docker-compose rm
 
 ```bash
 docker pull busybox
-docker run busybox echo "Hello Sparklane"
-docker run docker/whalesay cowsay "Hello Sparklane"
+docker run busybox echo "Hello Technicolor"
+docker run docker/whalesay cowsay "Hello Technicolor"
 cd 01-First-build
 docker build -t wgetip .
 docker run wgetip
