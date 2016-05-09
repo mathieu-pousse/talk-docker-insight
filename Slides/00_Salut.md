@@ -8,21 +8,11 @@
 
 
 
-## Julien Landuré - @jlandure
+## Arnaud Cogoluègnes
 
-- Formateur Docker @Zenika
-- CTO Zenika Nantes
-- Dév Java / Web / <span style="font-size: 0.5em">NodeJS & Go</span> ⇨ Microservices ⇨ Docker
-- Dev ⇨ <span style="font-size: 0.5em">Ops</span>
-
-## Laurent Maillet - @Nebounet
-
-- Formateur Web @Zenika Nantes
-- Dév Java / AngularJS & NodeJS
-- Aime Docker : Dev ⇨ <span style="font-size: 0.5em">Ops</span>
-
+- Directeur technique Zenika Lyon
+- Développeur Java
+- Spring Framework, Hadoop, Docker, etc
 
 <br><br>
-- Slides forked from @m_pousse et @ggerbaud - Zenika Rennes
-
-
+- Slides forked from @m_pousse, @ggerbaud, @jlandure, @Nebounet - Zenika Rennes & Nantes

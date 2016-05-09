@@ -17,6 +17,7 @@
 - **novembre 2015:**
   - DockerConEU @Barcelone
   - Docker 1.9
+- **avril 2016:** Docker 1.11
 
 
 
