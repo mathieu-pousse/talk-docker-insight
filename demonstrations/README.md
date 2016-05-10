@@ -51,6 +51,7 @@ docker pull busybox
 docker run busybox echo "Hello Technicolor"
 docker run docker/whalesay cowsay "Hello Technicolor"
 cd 01-First-build
+cat Dockerfile
 docker build -t wgetip .
 docker run wgetip
 docker run wgetip ipinfo.io/hostname
