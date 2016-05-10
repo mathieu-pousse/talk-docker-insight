@@ -25,7 +25,7 @@
 - 250+ Docker Meetup dans 50 pays
 - 30,000+ Github stars
 - 8500+ Github forks
-- 500M+ 200 Téléchargements du Docker Engine
+- 500M+ Téléchargements du Docker Engine
 - 1300+ développeurs de la communauté ont contribué
 
 <figure style="position: absolute; bottom: 50; left: 20px;">

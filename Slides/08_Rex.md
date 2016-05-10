@@ -73,9 +73,9 @@ Avantages d'utiliser Docker sur le poste de Dev :
 
 <br><br><br><br><br>
 
-=> Changement rapide de contexte & de projet
+&rarr; Changement rapide de contexte & de projet
 <br>
-=> Un Dev qui arrive sur le projet peut lancer le projet uniquement en connaissant Docker.
+&rarr; Un Dev qui arrive sur le projet peut lancer le projet uniquement en connaissant Docker.
 
 
 
@@ -87,7 +87,7 @@ Avantages d'utiliser Docker en production :
 * Conteneur = Unité logique Ops
 * mais aussi Auchan, Sanofi, Alptis
 
-<figure style="position: absolute; bottom: 300px;">
+<figure style="position: absolute; bottom: 270px;">
 	<img src="ressources/yvesrocher.png" alt="Logo Docker" width="300" />
 </figure>
 <figure style="position: absolute; bottom: 300px; left:410px">
@@ -98,11 +98,11 @@ Avantages d'utiliser Docker en production :
 </figure>
 
 <br><br><br><br><br><br><br>
-=> Pas besoin de connaître tous les langages et leurs frameworks (__HTTP est la norme__)
+&rarr; Pas besoin de connaître tous les langages et leurs frameworks (__HTTP est la norme__)
 <br>
-=> Nouvel outil pour tout le monde : cohésion pour amener  une démarche DevOps & microservices
+&rarr; Nouvel outil pour tout le monde : cohésion pour amener  une démarche DevOps & microservices
 <br>
-=> Facile de mixer du cloud public & privé
+&rarr; Facile de mixer du cloud public & privé
 
 
 
