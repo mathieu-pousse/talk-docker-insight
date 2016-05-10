@@ -81,7 +81,7 @@ AppArmor ("Application Armor") is a Linux kernel security module that allows the
 L'image contient le nécessaire pour faire fonctionner le conteneur.
 
 <br/>
-Le cycle de vie d'un conteneur est directement liée à l'exécution de la commande principale.
+Le cycle de vie d'un conteneur est directement lié à l'exécution de la commande principale.
 
 <br/>
 Droit root par défaut dans un conteneur.
@@ -189,6 +189,7 @@ Options:
  - ``-p``: publication de port `<host>:<container>`
  - ``--volume``: gestion des volumes
  - ``--link``: gestion des links
+ - ``--net``: gestion du réseau
 
 Notes :
 --link : permet de linker un conteneur à un autre (utiliser le nom d'hote
