@@ -6,6 +6,53 @@
 
 
 
+## Sondage "made in Docker" / Key Finding #1
+
+<figure style="position: absolute; bottom: 50px; right: 0px">
+  <img src="ressources/docker-sondage1.png" alt="sondage1" width="65%" />
+</figure>
+Notes : sondage fait par Docker (550 réponses)<br>
+Evolution of the Modern Software Supply Chain’ 2016 Survey<br>
+Moitié Dev, moitié Ops
+
+
+
+## Sondage "made in Docker" / Key Finding #2
+
+<figure style="position: absolute; bottom: 50px; right: 0px">
+  <img src="ressources/docker-sondage2.png" alt="sondage2" width="60%" />
+</figure>
+
+
+
+## Sondage "made in Docker" / Key Finding #3
+
+<figure style="position: absolute; bottom: 25px; right: 0px">
+  <img src="ressources/docker-sondage3.png" alt="sondage3" width="63%" />
+</figure>
+
+
+
+## Sondage "made in Docker" / Key Finding #4
+
+<figure style="position: absolute; bottom: 25px; right: 0px">
+  <img src="ressources/docker-sondage4.png" alt="sondage4" width="65%" />
+</figure>
+
+
+
+## Sondage "Docker pour les Devs"
+
+<figure style="position: absolute; bottom: 355px; right: 0px">
+  <img src="ressources/sondage-ext-2.png" alt="sondage-ext-1" width="65%" />
+</figure>
+<figure style="position: absolute; bottom: 78px; right: 0px">
+  <img src="ressources/sondage-ext-1.png" alt="sondage-ext-1" width="65%" />
+</figure>
+Notes : Sondage fait par Shippable (CAAS) en Californie avec 300+ réponses<br>Le premier sondage donne à peu près pareil : Swarm / Google / Amazon
+
+
+
 ## Usecases client DEV @Zenika
 
 Avantages d'utiliser Docker sur le poste de Dev :
@@ -65,16 +112,12 @@ Avantages d'utiliser Docker en production :
 - Atelier "Dockeriser mon app pour le Dev" : 2 à 3j
 - Atelier "Sensibilisation Docker pour les Ops " : 1 à 2j
 
-<figure style="position: absolute; bottom: 80px; right: 180px">
-	<img src="ressources/atzparis.png" alt="Logo Docker" width="750" />
-</figure>
 
 
+# DockerCon 2016<br/> Seattle <br/> 19-21th June
 
-# Docker Birthday #3 <br/> 21-26th March
-
-<figure style="position: absolute; bottom: 80px; right: 180px">
-  <img src="ressources/docker-birthday3.png" alt="birthday Docker" width="750" />
+<figure style="position: absolute; bottom: -65px; right: 180px">
+  <img src="ressources/dockercon16.jpg" alt="Dockercon" width="750" />
 </figure>
 
 
@@ -83,5 +126,5 @@ Avantages d'utiliser Docker en production :
 
 <figure style="position: absolute; bottom: 80px; right: 180px">
 	<img src="ressources/university.png" alt="Logo Docker" width="750" />
-	<center>**@eric_briand**</center>
+	<center>**@ZenikaNantes**</center>
 </figure>

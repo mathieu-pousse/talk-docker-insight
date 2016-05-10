@@ -22,11 +22,11 @@
 
 ## Quelques chiffres
 
-- 150+ Docker Meetup dans 50 pays
-- 25,000+ Github stars
-- 7000+ Github forks
-- 200M+ Docker Engine downloads
-- 1000+ développeurs de la communauté ont contribué
+- 250+ Docker Meetup dans 50 pays
+- 30,000+ Github stars
+- 8500+ Github forks
+- 500M+ 200 Téléchargements du Docker Engine
+- 1300+ développeurs de la communauté ont contribué
 
 <figure style="position: absolute; bottom: 50; left: 20px;">
     <img width="50%" src="ressources/docker-nantes.jpeg" alt="docker-hack-day"/>

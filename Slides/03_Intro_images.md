@@ -68,7 +68,7 @@ Noyau linux : primitives implémentées depuis 2008
 L'image contient le nécessaire pour faire fonctionner le conteneur
 
 <br/>
-Le cycle de vie d'un conteneur est directement liée à l'exécution de la commande principale.
+Le cycle de vie d'un conteneur est directement lié à l'exécution de la commande principale.
 
 <br/>
 Droit root par défaut dans un conteneur, il est tout de même recommandé d'utiliser un utilisateur dédié
