@@ -22,16 +22,6 @@
 
 
 
-## Quelques chiffres
-
-- 150+ Docker Meetup dans 50 pays
-- 25,000+ Github stars
-- 7000+ Github forks
-- 200M+ Téléchargements du Docker Engine
-- 1000+ développeurs de la communauté ont contribué
-
-
-
 ## Définition
 
 <br/>

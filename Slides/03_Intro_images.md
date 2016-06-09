@@ -62,6 +62,8 @@ netfilter.org is home to the software of the packet filtering framework inside t
 Capabilities (POSIX 1003.1e, capabilities(7)) provide fine-grained control over superuser permissions, allowing use of the root user to be avoided.
 AppArmor ("Application Armor") is a Linux kernel security module that allows the system administrator to restrict programs' capabilities with per-program profiles.
 
+
+
 ## Concepts
 
 - **Image**: Ensemble des données / méta données nécessaires au fonctionnement (~ template / read-only)
@@ -69,9 +71,6 @@ AppArmor ("Application Armor") is a Linux kernel security module that allows the
 - **Conteneur**: Instance d'une image
 - **Volumes**: Accès au FS de l'hôte
 - **Links / Networks**: Partage de la stack réseau entre conteneurs
-
-<!-- .element: class="align-right" -->
-/Repeat after me/ *Containers ARE NOT VMs !*
 
 
 
@@ -82,9 +81,6 @@ L'image contient le nécessaire pour faire fonctionner le conteneur.
 
 <br/>
 Le cycle de vie d'un conteneur est directement lié à l'exécution de la commande principale.
-
-<br/>
-Droit root par défaut dans un conteneur.
 
 <br/>
 Philosophie : Un seul et unique service (apache, tomcat, nginx, redis...) s'exécute dans un conteneur.
@@ -111,23 +107,16 @@ Pas de ssh, pas de Chef ou Vagrant
 ## Dockerfile
 
 ```
-FROM komljen/jdk-oracle
-MAINTAINER Alen Komljen <alen.komljen@live.com>
+FROM python:2.7
 
-RUN \
-  wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key \
-       | apt-key add -
-RUN echo "deb http://pkg.jenkins-ci.org/debian binary/" \
-       > /etc/apt/sources.list.d/jenkins.list
-RUN apt-get update
-RUN apt-get -y install jenkins && rm -rf /var/lib/apt/lists/
+WORKDIR /code
 
-VOLUME ["/root/.jenkins"]
+ADD requirements.txt requirements.txt
+RUN pip install -r requirements.txt
 
-RUN rm /usr/sbin/policy-rc.d
-CMD ["/usr/bin/java", "-jar", "/usr/share/jenkins/jenkins.war", "--webroot=/root/.jenkins/web"]
+ADD . .
 
-EXPOSE 8080
+CMD ["python", "app.py"]
 ```
 
 Notes :
@@ -139,9 +128,9 @@ The VOLUME instruction creates a mount point with the specified name and marks i
 
 <br/>
 ```
-$ docker run docker/whalesay cowsay "big up @Technicolor"
+$ docker run docker/whalesay cowsay "Hello World !!"
  _____________________
-< big up @Technicolor >
+< Hello World !! >
  ---------------------
     \
      \
@@ -178,25 +167,6 @@ Copy-on-write is a similar strategy of sharing and copying. In this strategy, sy
 
 
 
-## En pratique - la CLI
-
-Options:
-
- - ``-it``: mode intéractif
- - ``-d``: mode détaché ou "daemon"
- - ``--name``: pour nommer le conteneur
- - ``--rm``: pour supprimer le conteneur après exécution
- - ``-p``: publication de port `<host>:<container>`
- - ``--volume``: gestion des volumes
- - ``--link``: gestion des links
- - ``--net``: gestion du réseau
-
-Notes :
---link : permet de linker un conteneur à un autre (utiliser le nom d'hote
-du conteneur linké dans l'autre conteneur)
-
-
-
 ## Quick start
 
 - Récupérer une image:
@@ -226,30 +196,6 @@ docker start <container-name-or-id>
 
 
 
-# Le Docker Hub
-
-![](ressources/hub.docker-home.png)
-
-
-
-## Moteur de recherche
-
-![](ressources/hub.docker-search.png)
-
-
-
-## Exemple d'entrée
-
-![](ressources/hub.docker-details.png)
-
-
-
 # Résumé
 
 ![](https://docs.docker.com/v1.8/article-img/architecture.svg)
-
-
-
-# Demo time
-
-![](ressources/fingers-crossed.png)

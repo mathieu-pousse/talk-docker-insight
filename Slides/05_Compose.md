@@ -52,12 +52,6 @@ redis:
 
 
 
-# Demo time
-
-![](ressources/fingers-crossed.png)
-
-
-
 # docker registry
 
 <figure style="position: absolute; bottom: 200px; right: 200px">
@@ -80,7 +74,7 @@ redis:
 <br/><br/><br/><br/><br/><br/>
 Pour utiliser Docker facilement sous Mac et Windows
 
-Pour installer Docker sur des machines distantes (des "machines")
+Pour installer Docker sur des machines distantes
 
 
 
@@ -96,38 +90,6 @@ Installation et configuration simple pour Linux, Windows, MacOS, Google, AWS, ..
 <figure style="position: absolute; bottom: 50px; right: 600px">
     <img src="https://docs.docker.com/engine/installation/images/win_docker_host.svg" alt="Logo Docker" />
 </figure>
-
-
-
-# docker kitematic
-
-<br/><br/><br/><br/><br/>
-GUI de gestion pour Mac et Windows
-
-<figure style="position: absolute; bottom: 150px; right: 250px">
-    <img src="https://pbs.twimg.com/profile_images/505211933666975745/ZyasF8Em_400x400.png" alt="Logo Docker" width="350" />
-</figure>
-<figure style="position: absolute; bottom: 150px; left: 250px">
-    <img src="ressources/product_kitematic.png" alt="Logo Docker" width="350" />
-</figure>
-
-
-
-## kitematic, gui for docker #1
-
-![](ressources/kitematic-browse-images.png)
-
-
-
-## kitematic, gui for docker #2
-
-![](ressources/kitematic-cli-redis-container.png)
-
-
-
-## kitematic, gui for docker #3
-
-![](ressources/kitematic-volumes-dir.png)
 
 
 

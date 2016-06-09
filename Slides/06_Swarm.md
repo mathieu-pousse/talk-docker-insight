@@ -40,8 +40,8 @@ Reverse proxy pour avoir un seul point d'entrée
 
 
 
-# Demo time
+## Traefik
 
-![](ressources/fingers-crossed.png)
-
-
+<figure style="position: absolute; bottom: 100px; right: 250px">
+    <img src="ressources/Traefik_twitter_docker.png" alt="Traefik on Docker's tweet" />
+</figure>

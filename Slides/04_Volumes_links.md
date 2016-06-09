@@ -1,4 +1,4 @@
-# Volumes & Links
+# Volumes & Networks
 
 ![](ressources/docker-turtles-communication.jpg)
 
@@ -29,38 +29,24 @@ Utilisation:
 
 
 
-# Demo time
-
-![](ressources/fingers-crossed.png)
-
-
-
-## Links
+## Networks
 
 <br/>
-Permet de facilement connecter des conteneurs au niveau du réseau interne docker.
+Permet de créer un réseau multi-hôtes.
 
 <br/>
-Par défaut, les conteneurs sont isolés les uns des autres
+Offre une isolation pour les containers
 
 <br/>
-Etanchéité des interfaces réseaux (une interface par conteneur)
+Par défault, Bridge sur l'hôte, mais mécanisme de plugins
 
 <br/>
-Se base sur les routes réseau (standard)
-
-<br/>
-⚠ Mécanisme "legacy" - a vocation a être remplacé par les "user-defined networks"
+<!-- .element class="align-right" -->
+> Les piles sont fournies mais changeables
 
 
 
 ## Besoin
 
 
-![](ressources/links.png)
-
-
-
-# Demo time
-
-![](ressources/fingers-crossed.png)
+![](ressources/network_access.png)
