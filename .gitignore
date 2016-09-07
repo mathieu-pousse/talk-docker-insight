@@ -6,3 +6,4 @@ dist
 /build
 .iml
 demonstrations/04-Compose/back/target/
+reveal.js/

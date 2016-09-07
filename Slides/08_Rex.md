@@ -1,14 +1,6 @@
-# Zenika explique Docker
+# Merci !
 
-<figure style="position: absolute; bottom: 200px; right: 200px">
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/Wj2xBIQNwkE" frameborder="0" allowfullscreen></iframe>
+<figure style="position: absolute; bottom: 80px; right: 180px">
+  <img src="ressources/university.png" alt="Logo Docker" width="750" />
+  <center>**@eric_briand**</center>
 </figure>
-
-
-
-# Docker @ Zenika
-
-- Formation officielle Docker (sessions publiques et intra)
-<br/><br/><br/>
-- Prochaines sessions :
-  - Docker officielle avancée : 27 et 28 juin
