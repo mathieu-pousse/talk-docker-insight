@@ -199,3 +199,9 @@ docker start <container-name-or-id>
 # Résumé
 
 ![](https://docs.docker.com/v1.8/article-img/architecture.svg)
+
+
+
+# Demo time
+
+![](ressources/fingers-crossed.png)
