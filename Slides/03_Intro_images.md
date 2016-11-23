@@ -198,7 +198,7 @@ docker start <container-name-or-id>
 
 # Résumé
 
-![](https://docs.docker.com/v1.8/article-img/architecture.svg)
+![](https://docs.docker.com/engine/article-img/architecture.svg)
 
 
 
