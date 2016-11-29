@@ -43,10 +43,3 @@ Par défault, Bridge sur l'hôte, mais mécanisme de plugins
 <br/>
 <!-- .element class="align-right" -->
 > Les piles sont fournies mais changeables
-
-
-
-## Besoin
-
-
-![](ressources/network_access.png)
